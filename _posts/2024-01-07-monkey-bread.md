@@ -1,11 +1,11 @@
 ---
+layout: post
 title: "Monkey Bread"
 date: 2024-01-07
 tag: breakfast
 ---
-# {{ post.title }}
 
-![Image](/assets/monkey-bread.jpg)
+![Image](../assets/monkey-bread.jpg)
 
 ## Ingredients
 - 3 cans buttermilk biscuits (the non-flaky ones)
