@@ -1,5 +1,6 @@
 ---
 title: Sayre Recipes
+layout: home
 ---
 ## Welcome
 Welcome to Brian Sayre's recipe collection.
