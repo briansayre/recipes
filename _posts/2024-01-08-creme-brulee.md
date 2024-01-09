@@ -4,7 +4,7 @@ title: "Creme Brulee"
 date: 2024-01-07
 tags: dessert
 link: 2024/01/08/creme-brulee
-img: /assets/creme-brulee.jpg
+img: /assets/img/creme-brulee.jpg
 ---
 
 ![Image]({{ page.img }}) <br>
