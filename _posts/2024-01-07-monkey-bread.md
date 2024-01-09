@@ -3,6 +3,7 @@ layout: post
 title: "Monkey Bread"
 date: 2024-01-07
 tag: breakfast
+link: 2024-01-07-monkey-bread
 ---
 
 ![Image](../assets/monkey-bread.jpg)
