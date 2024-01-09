@@ -5,6 +5,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
     <title>Sayre Recipes</title>
 </head>
@@ -14,8 +15,9 @@
     <p> Welcome to Brian Sayre's recipe collection. </p>
     <div>
         {% for post in site.posts %}
-        <div>
-            <a href="recipes/{{ post.link }}">{{ post.title }}</a>
+        <div class="post">
+            <img src="{{ post.img }}" class="post-img"/>
+            <a href="{{ post.link }}" class="post-title">{{ post.title }}</a>
         </div>
         {% endfor %}
     </div>
