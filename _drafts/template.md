@@ -2,6 +2,7 @@
 title: "Monkey Bread"
 date: 2024-01-07
 tag: breakfast
+img: "/assets/monkey-bread.jpg"
 ---
 # {{ post.title }}
 
