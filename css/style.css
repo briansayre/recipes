@@ -24,6 +24,7 @@ h2 {
 }
 
 img {
+    float: left;
     object-fit: cover;
     width: 230px;
     height: 230px;
