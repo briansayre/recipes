@@ -1,7 +1,7 @@
 title: "Sayre Recipes"
 author: "Brian Sayre"
 description: "Brian Sayre's recipe collection."
-root: recipes/
+BASE_PATH: /recipes
 defaults:
   - scope:
       path: "assets/img"

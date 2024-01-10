@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Creme Brulee"
-date: 2024-01-07
+date: 2024-01-08
 tags: dessert
 link: 2024/01/08/creme-brulee
-img: {{site.root}}/assets/img/creme-brulee.jpg
+img: /assets/img/creme-brulee.jpg
 ---
 
-![Image]({{ page.img }}) <br>
+![Image]({{ site.BASE_PATH }}{{ page.img }})
 
 ## Ingredients
 - 2 cups heavy or light cream (or half-and-half)
