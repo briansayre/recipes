@@ -26,8 +26,8 @@ layout: default
     input.addEventListener("keypress", function(event) {
       if (event.key === "Enter") {
         event.preventDefault();
-        document.getElementById("search-button").click();
       }
+      document.getElementById("search-button").click();
     });
   });
 </script>
