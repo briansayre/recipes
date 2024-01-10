@@ -33,7 +33,7 @@ layout: home
 </script>
 
 <div class="section">
-    <button id="All" class="button" onclick="filterUsingCategory('All')">
+    <button id="All" class="button is-small" onclick="filterUsingCategory('All')">
         Show All Posts
     </button>
     {% assign tags = site.tags | sort %}

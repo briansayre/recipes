@@ -9,20 +9,18 @@
 </head>
 
 <body>
-    <nav class="block navbar is-light is-spaced centered ">
-        <a  href="{{ site.baseurl }}/" class="navbar-item">
-            {{ site.title }}
-        </a>
+    <nav class="level">
+        <h1 class="level-item has-text-centered">
+            <a  href="{{ site.baseurl }}/" class="navbar-item">
+                {{ site.title }}
+            </a>
+        </h1>
     </nav>
 
     <div class="container">
-        <a  href="{{ site.baseurl }}/" class="navbar-item">
-        <h1 class="title block">{{ site.title }} </h1>
-        </a>
-        <section>
-            {{ content }}
-        </section>
+        {{ content }}
     </div>
+
     <footer>
     </footer>
 </body>
