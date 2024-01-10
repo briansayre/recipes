@@ -16,9 +16,8 @@ html {
     color: #257953!important;
 }
 
-a, a:hover, a:active {
-    all: unset;
-    cursor: pointer;
+a, a:hover, a:active, a:visited {  
+    text-decoration: none; 
 }
 
 #post-title {
