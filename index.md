@@ -69,9 +69,12 @@ layout: default
                         <p class="title is-4 has-text-success-dark" id="post-title">{{ post.title }}</p>
                     </div>
                     <div class="content">
+                        <br>
                         {% for tag in post.tags %}
                         <span class="tag"> {{ tag }} </span>
                         {% endfor %}
+                        <br>
+                        <time datetime="{{ post.date }}">{{ post.date }}</time>
                     </div>
                 </div>
             </div>
