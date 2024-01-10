@@ -63,7 +63,7 @@ layout: default
     {% assign id = 0 %}
     {% for post in site.posts %}
     {% assign id = id | plus:1 %}
-    <div class="column is-12-mobile is-4-tablet is-4-desktop is-3-widescreen" id="{{id}}">
+    <div class="column is-12-mobile is-4-tablet is-3-widescreen" id="{{id}}">
         <a href="{{ site.baseurl }}{{ post.url }}">
             <div class="card">
                 <div class="card-image">
