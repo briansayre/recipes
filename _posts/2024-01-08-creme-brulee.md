@@ -8,10 +8,9 @@ img: /assets/img/creme-brulee.jpg
 ---
 
 <button class="button">
-    <span class="icon">
-        <i class="fa-solid fa-angle-left"></i>
-    </span>
-    <span>Back</span>
+    <a href="{{ site.baseurl }}">
+        <span>Back</span>
+    </a>
 </button>  
   
 ## {{ page.title }}  
