@@ -18,6 +18,7 @@ layout: home
 </script>
 
 <div class="container">
+    <div>
     <button id="All" onclick="filterUsingCategory('All')">
         Show All Posts
     </button>
@@ -28,6 +29,7 @@ layout: home
         {{ cat }}
     </button>
     {% endfor %}
+    </div>
 
 {% assign id = 0 %}
 {% for post in site.posts %}
