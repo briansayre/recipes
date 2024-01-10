@@ -15,6 +15,9 @@ layout: home
           : 'none';
     {% endfor %}
   }
+</script>
+
+<script type="text/javascript">
   function filterUsingSearch(searchText) {
     var id = 0;
     {% for post in site.posts %}
@@ -51,7 +54,7 @@ layout: home
           <input class="input" type="text" id="search-text" placeholder="Search recipes">
         </div>
         <div class="control">
-          <a class="button is-info" onclick="filterUsingCategory(document.getElementById('search-text').value)">
+          <a class="button is-info" onclick="filterUsingSearch(document.getElementById('search-text').value)">
             Search
           </a>
         </div>
