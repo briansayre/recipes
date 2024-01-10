@@ -3,7 +3,6 @@ layout: default
 title: "Monkey Bread"
 date: 2024-01-07
 tags: breakfast yummy
-link: 2024/01/07/monkey-bread
 img: /assets/img/monkey-bread.jpg
 ---
 
