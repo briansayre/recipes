@@ -21,7 +21,7 @@ layout: home
   function filterUsingSearch(searchText) {
     var id = 0;
     {% for post in site.posts %}
-      var title = {{ post.title }}
+      var title = "{{ post.title }}"
       
       var postDiv = document.getElementById(++id);
       postDiv.style.display =
