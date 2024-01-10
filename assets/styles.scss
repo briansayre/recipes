@@ -44,3 +44,13 @@ h2 {
     -moz-box-shadow: 5px 5px 33px -18px rgba(112, 112, 112, 0.79);
     box-shadow: 5px 5px 33px -18px rgba(112, 112, 112, 0.79);
 }
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
