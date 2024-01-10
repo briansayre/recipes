@@ -32,7 +32,7 @@ layout: default
   }
 </script>
 
-<div class="section">
+<div class="block">
     <button id="All" class="button is-small" onclick="filterUsingCategory('All')">
         Show All Posts
     </button>
@@ -44,7 +44,8 @@ layout: default
     </button>
     {% endfor %}
 </div>
-<div class="section">
+
+<div class="block">
   <div class="field has-addons">
     <div class="control">
       <input class="input" type="text" id="search-text" placeholder="Search recipes">
@@ -56,7 +57,8 @@ layout: default
     </div>
   </div>
 </div>
-<div class="section columns is-multiline is-mobile">
+
+<div class="block columns is-multiline is-mobile">
     {% assign id = 0 %}
     {% for post in site.posts %}
     {% assign id = id | plus:1 %}
