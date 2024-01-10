@@ -7,7 +7,7 @@ link: 2024/01/08/creme-brulee
 img: /assets/img/creme-brulee.jpg
 ---
 
-![Image]({{ site.BASE_PATH }}{{ page.img }})
+![Image]({{ site.baseurl }}{{ page.img }})
 
 ## Ingredients
 - 2 cups heavy or light cream (or half-and-half)
