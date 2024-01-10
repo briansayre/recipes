@@ -12,9 +12,55 @@
         <a id="header" href="/recipes">Sayre Recipes</a>
     </nav>
     <section>
-        <div class="container">
+        <script type="text/javascript">
+  function filterUsingCategory(selectedCategory) {
+    var id = 0;
     
-    <div class="post">
+      var cats = ["dessert"]
+
+      var postDiv = document.getElementById(++id);
+      postDiv.style.display =
+        (selectedCategory == 'All' || cats.includes(selectedCategory))
+          ? 'unset'
+          : 'none';
+    
+      var cats = ["breakfast","yummy"]
+
+      var postDiv = document.getElementById(++id);
+      postDiv.style.display =
+        (selectedCategory == 'All' || cats.includes(selectedCategory))
+          ? 'unset'
+          : 'none';
+    
+  }
+</script>
+
+<div class="container">
+    <button id="All" onclick="filterUsingCategory('All')">
+        Show All Posts
+    </button>
+    
+    
+    
+    <button id="breakfast" onclick="filterUsingCategory(this.id)">
+        breakfast
+    </button>
+    
+    
+    <button id="dessert" onclick="filterUsingCategory(this.id)">
+        dessert
+    </button>
+    
+    
+    <button id="yummy" onclick="filterUsingCategory(this.id)">
+        yummy
+    </button>
+    
+
+
+
+  
+    <div class="post" id="1">
         <a href="2024/01/08/creme-brulee"><img src="/assets/img/creme-brulee.jpg" class="post-img" /></a>
         <a href="2024/01/08/creme-brulee" class="post-title">Creme Brulee</a>
         <div class="post-tags">
@@ -23,8 +69,9 @@
             
         </div>
     </div>
-    
-    <div class="post">
+
+  
+    <div class="post" id="2">
         <a href="2024/01/07/monkey-bread"><img src="/assets/img/monkey-bread.jpg" class="post-img" /></a>
         <a href="2024/01/07/monkey-bread" class="post-title">Monkey Bread</a>
         <div class="post-tags">
@@ -35,7 +82,8 @@
             
         </div>
     </div>
-    
+
+
 </div>
 
     </section>
