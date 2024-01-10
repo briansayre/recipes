@@ -33,7 +33,7 @@ layout: home
 {% for post in site.posts %}
   {% assign id = id | plus:1 %}
     <div class="post" id="{{id}}">
-        <a href="{{ post.link }}"><img src="{{ site.BASE_URL }}{{ post.img }}" class="post-img"/></a>
+        <a href="{{ post.link }}"><img src="{{ site.BASE_PATH }}{{ post.img }}" class="post-img"/></a>
         <a href="{{ post.link }}" class="post-title">{{ post.title }}</a>
         <div class="post-tags">
             {% for tag in post.tags %}
