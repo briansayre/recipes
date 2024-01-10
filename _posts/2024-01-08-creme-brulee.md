@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Creme Brulee"
 date: 2024-01-08
 tags: dessert
