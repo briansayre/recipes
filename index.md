@@ -5,55 +5,49 @@ layout: default
 <script type="text/javascript">
   function filterUsingCategory(selectedCategory) {
     var id = 0;
-    {% for post in site.posts %}
-      var cats = {{ post.tags | jsonify }}
 
-      var postDiv = document.getElementById(++id);
-      postDiv.style.display =
-        (selectedCategory == 'All' || cats.includes(selectedCategory))
-          ? 'unset'
-          : 'none';
+    {% for post in site.posts %}
+    var cats = {{ post.tags | jsonify }}
+    var postDiv = document.getElementById(++id);
+    postDiv.style.display = (selectedCategory == 'All' || cats.includes(selectedCategory)) ? 'unset' : 'none';
     {% endfor %}
   }
-</script>
-
-<script type="text/javascript">
   function filterUsingSearch(searchText) {
     var id = 0;
+
     {% for post in site.posts %}
-      var title = "{{ post.title }}"
-      
-      var postDiv = document.getElementById(++id);
-      postDiv.style.display =
-        (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase()))
-          ? 'unset'
-          : 'none';
+    var title = "{{ post.title }}"
+    var postDiv = document.getElementById(++id);
+    postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
     {% endfor %}
   }
 </script>
 
 <div class="block">
-    <button id="All" class="button is-small" onclick="filterUsingCategory('All')">
-        Show All Posts
-    </button>
-    {% assign tags = site.tags | sort %}
-    {% for category in tags %}
-    {% assign cat = category | first %}
-    <button id="{{ cat }}" class="button is-small" onclick="filterUsingCategory(this.id)">
-        {{ cat }}
-    </button>
-    {% endfor %}
-</div>
-
-<div class="block">
-  <div class="field has-addons">
-    <div class="control">
-      <input class="input" type="text" id="search-text" placeholder="Search recipes">
+  <div class="is-flex is-flex-direction-row	is-flex-wrap-wrap	is-justify-content-space-between is-align-content-flex-start">
+    <div class="">
+      <button id="All" class="button is-small" onclick="filterUsingCategory('All')">
+          Show All Posts
+      </button>
+      {% assign tags = site.tags | sort %}
+      {% for category in tags %}
+      {% assign cat = category | first %}
+      <button id="{{ cat }}" class="button is-small" onclick="filterUsingCategory(this.id)">
+          {{ cat }}
+      </button>
+      {% endfor %}
     </div>
-    <div class="control">
-      <a class="button is-info" onclick="filterUsingSearch(document.getElementById('search-text').value)">
-        Search
-      </a>
+    <div class="">
+      <div class="field has-addons">
+        <div class="control">
+          <input class="input" type="text" id="search-text" placeholder="Search recipes">
+        </div>
+        <div class="control">
+          <a class="button is-info" onclick="filterUsingSearch(document.getElementById('search-text').value)">
+            Search
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -62,7 +56,7 @@ layout: default
     {% assign id = 0 %}
     {% for post in site.posts %}
     {% assign id = id | plus:1 %}
-    <div class="column" id="{{id}}">
+    <div class="column is-full-mobile is-one-third-tablet is-half-desktop is-one-quarter-widescreen is-one-quarter-fullhd" id="{{id}}">
         <a href="{{ site.baseurl }}{{ post.url }}">
             <div class="card">
                 <div class="card-image">
