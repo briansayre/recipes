@@ -9,7 +9,7 @@ img: /assets/img/creme-brulee.jpg
 
 <button class="button">
     <span class="icon">
-        <i class="fa-solid fa-arrow-left"></i>    
+        <i class="fa-solid fa-angle-left"></i>
     </span>
     <span>Back</span>
 </button>  
