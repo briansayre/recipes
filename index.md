@@ -67,7 +67,7 @@ layout: default
         <a href="{{ site.baseurl }}{{ post.url }}">
             <div class="card">
                 <div class="card-image">
-                    <figure class="image is-square">
+                    <figure class="image">
                         <img src="{{ site.baseurl }}{{ post.img }}" class="card-img" alt="image">
                     </figure>
                 </div>
