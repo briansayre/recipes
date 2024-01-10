@@ -12,7 +12,7 @@ img: /assets/img/creme-brulee.jpg
 
 {% for image in site.static_files %}
     {% if image.path contains 'img/' %}
-        <img class="recipe-img" src="{{ site.baseurl }}{{ page.img }}" alt="{{ page.title }} Image">
+        <img class="recipe-img" src="{{ site.baseurl }}{{ image.path }}" alt="{{ page.title }} Image">
     {% endif %}
 {% endfor %}
 
