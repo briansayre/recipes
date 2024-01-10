@@ -12,12 +12,12 @@ html {
     margin: 30px auto 40px auto;
     font-family: 'Young Serif', serif;
     font-size: 2em;
-    text-decoration: none;
-    color: #257953!important;
+    color: #257953;
 }
 
-a, a:hover, a:active, a:visited {  
+#header a, a:hover, a:active, a:visited {  
     text-decoration: none; 
+    color: #257953;
 }
 
 #post-title {
