@@ -21,11 +21,13 @@ layout: default
     postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
     {% endfor %}
   }
-  document.getElementById('search-text').onkeydown = function(e){
-    if(e.keyCode == 13){
-      filterUsingSearch(document.getElementById('search-text').value)
+  var input = document.getElementById("search-text");
+  input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      document.getElementById("search-button").click();
     }
-  };
+  });
 </script>
 
 <div class="block">
