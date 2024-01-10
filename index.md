@@ -18,6 +18,9 @@ layout: home
 </script>
 
 <div class="container">
+    <a  href="{{ site.baseurl }}/" class="navbar-item">
+        <h1 class="title block">{{ site.title }} </h1>
+    </a>
     <div class="block">
         <button id="All" class="button" onclick="filterUsingCategory('All')">
             Show All Posts
