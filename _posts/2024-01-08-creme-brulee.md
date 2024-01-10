@@ -11,9 +11,9 @@ img: /assets/img/creme-brulee.jpg
 ## {{ page.title }}  
 
 {% for image in site.static_files %}
-    {% if image.path contains 'img/' %}
-        <img class="recipe-img" src="{{ site.baseurl }}{{ image.path }}" alt="{{ page.title }} Image">
-    {% endif %}
+{% if image.path contains 'img/' %}
+<img class="recipe-img" src="{{ site.baseurl }}{{ image.path }}" alt="{{ page.title }} Image">
+{% endif %}
 {% endfor %}
 
 ## Ingredients
