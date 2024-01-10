@@ -4,12 +4,15 @@
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="{{ "/assets/styles.css" | absolute_url }}" rel="stylesheet" type="text/css"></head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ " /assets/styles.css" | absolute_url }}" rel="stylesheet" type="text/css">
+</head>
 
 <body>
-    <nav>
-        <a id="header" href="{{ site.baseurl }}"><h1>{{ site.title }}</h1></a>
+    <nav class="navbar is-light is-spaced">
+        <a  href="{{ site.baseurl }}/" class="navbar-item">
+            {{ site.title }}
+        </a>
     </nav>
     <section>
         {{ content }}

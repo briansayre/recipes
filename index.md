@@ -18,31 +18,43 @@ layout: home
 </script>
 
 <div class="container">
-    <div>
-    <button id="All" onclick="filterUsingCategory('All')">
-        Show All Posts
-    </button>
-    {% assign tags = site.tags | sort %}
-    {% for category in tags %}
-    {% assign cat = category | first %}
-    <button id="{{ cat }}" onclick="filterUsingCategory(this.id)">
-        {{ cat }}
-    </button>
-    {% endfor %}
+    <div class="block">
+        <button id="All" class="button" onclick="filterUsingCategory('All')">
+            Show All Posts
+        </button>
+        {% assign tags = site.tags | sort %}
+        {% for category in tags %}
+        {% assign cat = category | first %}
+        <button id="{{ cat }}" class="button" onclick="filterUsingCategory(this.id)">
+           {{ cat }}
+        </button>
+        {% endfor %}
     </div>
-
-{% assign id = 0 %}
-{% for post in site.posts %}
-  {% assign id = id | plus:1 %}
-    <div class="post" id="{{id}}">
-        <a href="{{ post.link }}"><img src="{{ site.baseurl }}{{ post.img }}" height="175px" width="250px" class="post-img"/></a>
-        <a href="{{ post.link }}" class="post-title">{{ post.title }}</a>
-        <div class="post-tags">
-            {% for tag in post.tags %}
-            <span class="post-tag"> {{ tag }} </span>
-            {% endfor %}
+    <div class="block columns is-multiline is-mobile">
+        {% assign id = 0 %}
+        {% for post in site.posts %}
+        {% assign id = id | plus:1 %}
+        <div class="column" id="{{id}}">
+            <a href="{{ site.baseurl }}{{ post.url }}">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="{{ site.baseurl }}{{ post.img }}" class="card-img" alt="image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media-content">
+                            <p class="title is-4">{{ post.title }}</p>
+                        </div>
+                        <div class="content">
+                            {% for tag in post.tags %}
+                            <span class="tag"> {{ tag }} </span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
+        {% endfor %}
     </div>
-{% endfor %}
-
 </div>
