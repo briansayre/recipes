@@ -26,13 +26,13 @@ layout: default
 <div class="block">
   <div class="is-flex is-flex-direction-row	is-flex-wrap-wrap	is-justify-content-space-between is-align-content-flex-start">
     <div class="buttons">
-      <button id="All" class="button is-success-dark" onclick="filterUsingCategory('All')">
+      <button id="All" class="button is-success" onclick="filterUsingCategory('All')">
           Show All Posts
       </button>
       {% assign tags = site.tags | sort %}
       {% for category in tags %}
       {% assign cat = category | first %}
-      <button id="{{ cat }}" class="button is-success-dark" onclick="filterUsingCategory(this.id)">
+      <button id="{{ cat }}" class="button is-success is-outlined" onclick="filterUsingCategory(this.id)">
           {{ cat }}
       </button>
       {% endfor %}
@@ -73,8 +73,6 @@ layout: default
                         {% for tag in post.tags %}
                         <span class="tag"> {{ tag }} </span>
                         {% endfor %}
-                        <br>
-                        <time datetime="{{ post.date }}">{{ post.date }}</time>
                     </div>
                 </div>
             </div>
