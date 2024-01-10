@@ -21,12 +21,14 @@ layout: default
     postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
     {% endfor %}
   }
-  var input = document.getElementById("search-text");
-  input.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      document.getElementById("search-button").click();
-    }
+  window.addEventListener("DOMContentLoaded", (event) => {
+    var input = document.getElementById("search-text");
+    input.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("search-button").click();
+      }
+    });
   });
 </script>
 
