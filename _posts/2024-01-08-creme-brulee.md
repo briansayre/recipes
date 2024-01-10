@@ -7,6 +7,13 @@ link: 2024/01/08/creme-brulee
 img: /assets/img/creme-brulee.jpg
 ---
 
+<button class="button">
+    <span class="icon">
+        <i class="fa-solid fa-arrow-left"></i>    
+    </span>
+    <span>Back</span>
+</button>  
+  
 ## {{ page.title }}  
 
 <img class="recipe-img" src="{{ site.baseurl }}{{ page.img }}" alt="{{ page.title }} Image">

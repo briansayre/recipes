@@ -7,6 +7,14 @@ link: 2024/01/07/monkey-bread
 img: /assets/img/monkey-bread.jpg
 ---
 
+
+<button class="button">
+    <span class="icon">
+        <i class="fa-solid fa-arrow-left"></i>    
+    </span>
+    <span>Back</span>
+</button>  
+  
 ## {{ page.title }}  
 
 <img class="recipe-img" src="{{ site.baseurl }}{{ page.img }}" alt="{{ page.title }} Image">
