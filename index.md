@@ -51,7 +51,7 @@ layout: home
           <input class="input" type="text" id="search-text" placeholder="Search recipes">
         </div>
         <div class="control">
-          <a class="button is-info" onclick="filterUsingCategory(document.getElementById('search-text').value)>
+          <a class="button is-info" onclick="filterUsingCategory(document.getElementById('search-text').value)">
             Search
           </a>
         </div>
