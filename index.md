@@ -21,6 +21,11 @@ layout: default
     postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
     {% endfor %}
   }
+  document.getElementById('search-text').onkeydown = function(e){
+    if(e.keyCode == 13){
+      filterUsingSearch(document.getElementById('search-text').value)
+    }
+  };
 </script>
 
 <div class="block">
