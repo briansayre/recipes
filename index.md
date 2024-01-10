@@ -1,6 +1,6 @@
 ---
 title: Sayre Recipes
-layout: home
+layout: default
 ---
 <script type="text/javascript">
   function filterUsingCategory(selectedCategory) {
