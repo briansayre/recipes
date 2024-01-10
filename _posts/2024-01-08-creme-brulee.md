@@ -10,7 +10,11 @@ img: /assets/img/creme-brulee.jpg
   
 ## {{ page.title }}  
 
-<img class="recipe-img" src="{{ site.baseurl }}{{ page.img }}" alt="{{ page.title }} Image">
+{% for image in site.static_files %}
+    {% if image.path contains 'img/' %}
+        <img class="recipe-img" src="{{ site.baseurl }}{{ page.img }}" alt="{{ page.title }} Image">
+    {% endif %}
+{% endfor %}
 
 ## Ingredients
 - 2 cups heavy or light cream (or half-and-half)
