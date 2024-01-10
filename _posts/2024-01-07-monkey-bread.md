@@ -9,7 +9,7 @@ img: /assets/img/monkey-bread.jpg
 
 ## {{ page.title }}  
 
-![Image]({{ site.baseurl }}{{ page.img }})
+![Image]({{ site.baseurl }}{{ page.img }}){: height="300" }
 
 ## Ingredients
 - 3 cans buttermilk biscuits (the non-flaky ones)
