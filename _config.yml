@@ -2,6 +2,7 @@ title: "Sayre Recipes"
 author: "Brian Sayre"
 description: "Brian Sayre's recipe collection."
 baseurl: /recipes
+url: https://briansayre.com
 defaults:
   - scope:
       path: "assets/img"
