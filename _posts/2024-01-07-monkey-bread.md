@@ -7,11 +7,7 @@ link: 2024/01/07/monkey-bread
 img: /assets/img/monkey-bread.jpg
 ---
 
-<button class="button">
-    <a href="{{ site.baseurl }}">
-        <span>Back</span>
-    </a>
-</button>  
+{% include back.html %}
   
 ## {{ page.title }}  
 
