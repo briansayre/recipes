@@ -16,8 +16,9 @@ html {
     color: #257953!important;
 }
 
-a {
+a, a:hover, a:active {
     all: unset;
+    cursor: pointer;
 }
 
 #post-title {
