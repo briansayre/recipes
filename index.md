@@ -15,6 +15,18 @@ layout: home
           : 'none';
     {% endfor %}
   }
+  function filterUsingSearch(searchText) {
+    var id = 0;
+    {% for post in site.posts %}
+      var title = {{ post.title }}
+      
+      var postDiv = document.getElementById(++id);
+      postDiv.style.display =
+        (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase()))
+          ? 'unset'
+          : 'none';
+    {% endfor %}
+  }
 </script>
 
 <div class="container">
@@ -32,6 +44,18 @@ layout: home
            {{ cat }}
         </button>
         {% endfor %}
+    </div>
+    <div class="block">
+      <div class="field has-addons">
+        <div class="control">
+          <input class="input" type="text" id="search-text" placeholder="Search recipes">
+        </div>
+        <div class="control">
+          <a class="button is-info" onclick="filterUsingCategory(document.getElementById('search-text').value)>
+            Search
+          </a>
+        </div>
+      </div>
     </div>
     <div class="block columns is-multiline is-mobile">
         {% assign id = 0 %}
