@@ -68,7 +68,7 @@ layout: default
             <div class="card">
                 <div class="card-image">
                     <figure class="image">
-                        <img src="{{ site.baseurl }}{{ post.img }}" alt="image">
+                        <img class="card-img" src="{{ site.baseurl }}{{ post.img }}" alt="image">
                     </figure>
                 </div>
                 <div class="card-content">

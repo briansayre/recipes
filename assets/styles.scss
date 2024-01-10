@@ -50,6 +50,10 @@ h2 {
     box-shadow: 5px 5px 33px -18px rgba(112, 112, 112, 0.79);
 }
 
+.card-img {
+    object-fit: cover;
+}
+
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
