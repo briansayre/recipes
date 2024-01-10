@@ -25,14 +25,14 @@ layout: default
 
 <div class="block">
   <div class="is-flex is-flex-direction-row	is-flex-wrap-wrap	is-justify-content-space-between is-align-content-flex-start">
-    <div class="">
-      <button id="All" class="button is-small" onclick="filterUsingCategory('All')">
+    <div class="buttons">
+      <button id="All" class="button is-success-dark" onclick="filterUsingCategory('All')">
           Show All Posts
       </button>
       {% assign tags = site.tags | sort %}
       {% for category in tags %}
       {% assign cat = category | first %}
-      <button id="{{ cat }}" class="button is-small" onclick="filterUsingCategory(this.id)">
+      <button id="{{ cat }}" class="button is-success-dark" onclick="filterUsingCategory(this.id)">
           {{ cat }}
       </button>
       {% endfor %}
@@ -43,7 +43,7 @@ layout: default
           <input class="input" type="text" id="search-text" placeholder="Search recipes">
         </div>
         <div class="control">
-          <a class="button is-info" onclick="filterUsingSearch(document.getElementById('search-text').value)">
+          <a class="button is-info has-background-success-dark" id="search-button" onclick="filterUsingSearch(document.getElementById('search-text').value)">
             Search
           </a>
         </div>
@@ -66,7 +66,7 @@ layout: default
                 </div>
                 <div class="card-content">
                     <div class="media-content">
-                        <p class="title is-4">{{ post.title }}</p>
+                        <p class="title is-4 has-text-success-dark" id="post-title">{{ post.title }}</p>
                     </div>
                     <div class="content">
                         {% for tag in post.tags %}
