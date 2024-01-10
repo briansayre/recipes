@@ -32,7 +32,7 @@ layout: default
       {% assign tags = site.tags | sort %}
       {% for category in tags %}
       {% assign cat = category | first %}
-      <button id="{{ cat }}" class="button is-light is-outlined" onclick="filterUsingCategory(this.id)">
+      <button id="{{ cat }}" class="button is-outlined" onclick="filterUsingCategory(this.id)">
           {{ cat }}
       </button>
       {% endfor %}
@@ -43,7 +43,7 @@ layout: default
           <input class="input" type="text" id="search-text" placeholder="Search recipes">
         </div>
         <div class="control">
-          <a class="button is-info has-background-success-dark" id="search-button" onclick="filterUsingSearch(document.getElementById('search-text').value)">
+          <a class="button is-info has-background-success-dark" type="submit" id="search-button" onclick="filterUsingSearch(document.getElementById('search-text').value)">
             Search
           </a>
         </div>
