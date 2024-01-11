@@ -1,11 +1,11 @@
 <script type="text/javascript">
-  function filterUsingCategory(selectedCategory) {
+  function filterUsingTag(selectedTag) {
     var id = 0;
 
     {% for post in site.posts %}
-    var cats = {{ post.tags | jsonify }}
+    var tags = {{ post.tags | jsonify }}
     var postDiv = document.getElementById(++id);
-    postDiv.style.display = (selectedCategory == 'All' || cats.includes(selectedCategory)) ? 'unset' : 'none';
+    postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
     {% endfor %}
   }
   function filterUsingSearch(searchText) {
@@ -31,14 +31,14 @@
 <div class="block">
   <div class="is-flex is-flex-direction-row	is-flex-wrap-wrap	is-justify-content-space-between is-align-content-flex-start">
     <div class="buttons is-flex-grow-0">
-      <button id="All" class="button is-outlined" onclick="filterUsingCategory('All')">
+      <button id="All" class="button is-outlined" onclick="filterUsingTag('All')">
           Show All Posts
       </button>
       {% assign tags = site.tags | sort %}
-      {% for category in tags %}
-      {% assign cat = category | first %}
-      <button id="{{ cat }}" class="button is-light" onclick="filterUsingCategory(this.id)">
-          {{ cat }}
+      {% for tag in tags %}
+      {% assign t = tag | first %}
+      <button id="{{ t }}" class="button is-light" onclick="filterUsingTag(this.id)">
+          {{ t }}
       </button>
       {% endfor %}
     </div>
