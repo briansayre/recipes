@@ -46,6 +46,9 @@
       </div>
       <div class="dropdown-menu" id="dropdown-menu" role="menu">
         <div class="dropdown-content">
+          <a href="#" class="dropdown-item" id="All" onclick="filterUsingTag('All')">
+            Show All
+          </a>
           {% assign tags = site.tags | sort %}
           {% for tag in tags %}
           {% assign t = tag | first %}
