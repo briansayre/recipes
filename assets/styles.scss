@@ -17,9 +17,11 @@ html {
     color: #257953;
 }
 
-#header a, a:hover, a:active, a:visited {  
-    text-decoration: none; 
-    color: #257953;
+#header {
+    a, a:hover, a:active, a:visited {  
+        text-decoration: none; 
+        color: #257953;
+    }
 }
 
 .post-title {
