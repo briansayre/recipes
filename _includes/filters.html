@@ -34,7 +34,7 @@
 </script>
 
 <div class="block columns">
-  <div class="column is-12-mobile is-6-tablet is-6-widescreen">
+  <div class="column is-6-mobile is-6-tablet is-6-widescreen">
     <div class="dropdown">
       <div class="dropdown-trigger">
         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
@@ -57,28 +57,26 @@
       </div>
     </div>
   </div>
-  <div class="column is-12-mobile is-6-tablet is-6-widescreen">
-    <div class="is-flex-grow-1">
-      <div id="seach-div" class="field has-addons is-hidden-touch" style="float: right;">
-        <div class="control">
-          <input class="input" type="text" id="search-text" placeholder="Search recipes">
-        </div>
-        <div class="control">
-          <a class="button is-info has-background-success-dark" type="submit" id="search-button" onclick="filterUsingSearch(document.getElementById('search-text').value)">
-            Search
-          </a>
-        </div>
+  <div class="column is-6-mobile is-6-tablet is-6-widescreen">
+    <div id="seach-div" class="field has-addons is-hidden-touch" style="float: right;">
+      <div class="control">
+        <input class="input" type="text" id="search-text" placeholder="Search recipes">
       </div>
-      <div id="seach-div" class="field has-addons is-hidden-desktop" style="float: none;">
-        <div class="control is-expanded">
-          <input class="input" type="text" id="search-text" placeholder="Search recipes">
-        </div>
-        <div class="control">
-          <a class="button is-info has-background-success-dark" type="submit" id="search-button" onclick="filterUsingSearch(document.getElementById('search-text').value)">
-            Search
-          </a>
-        </div>
+      <div class="control">
+        <a class="button is-info has-background-success-dark" type="submit" id="search-button" onclick="filterUsingSearch(document.getElementById('search-text').value)">
+          Search
+        </a>
       </div>
     </div>
+    <!-- <div id="seach-div" class="field has-addons is-hidden-desktop" style="float: none;">
+      <div class="control is-expanded">
+        <input class="input" type="text" id="search-text" placeholder="Search recipes">
+      </div>
+      <div class="control">
+        <a class="button is-info has-background-success-dark" type="submit" id="search-button" onclick="filterUsingSearch(document.getElementById('search-text').value)">
+          Search
+        </a>
+      </div>
+    </div> -->
   </div>
 </div>
