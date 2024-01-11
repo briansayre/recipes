@@ -25,17 +25,17 @@
         document.getElementById("search-button").click();
       }
     });
-    var dropdown = document.querySelector('.dropdown');
-    dropdown.addEventListener('click', function(event) {
-      event.stopPropagation();
-      dropdown.classList.toggle('is-active');
-    });
+    // var dropdown = document.querySelector('.dropdown');
+    // dropdown.addEventListener('click', function(event) {
+    //   event.stopPropagation();
+    //   dropdown.classList.toggle('is-active');
+    // });
   });
 </script>
 
 <div class="block columns">
   <div class="column is-12-mobile is-6-tablet is-6-widescreen">
-    <div class="dropdown">
+    <div class="dropdown is-hoverable">
       <div class="dropdown-trigger">
         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
           <span>Browse by type</span>
