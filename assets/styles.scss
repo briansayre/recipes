@@ -22,8 +22,9 @@ html {
     color: #257953;
 }
 
-#post-title {
+.post-title {
     font-family: 'Young Serif', serif;
+    overflow: hidden;
 }
 
 h2 {
