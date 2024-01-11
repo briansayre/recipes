@@ -2,11 +2,11 @@
 layout: default
 title: "TODO"
 date: YYYY-MM-DD
-tags: 
+tags: TODO
 img: /assets/img/TODO.jpg
 ---
 
-{% include back.html %}
+{% include postbuttons.html %}
   
 ## {{ page.title }}  
 

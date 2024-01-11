@@ -6,7 +6,7 @@ tags: Dessert Yummy
 img: /assets/img/creme-brulee.jpg
 ---
 
-{% include back.html %}
+{% include postbuttons.html %}
   
 ## {{ page.title }}  
 

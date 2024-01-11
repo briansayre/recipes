@@ -6,7 +6,7 @@ tags: Dinner
 img: /assets/img/hot-honey-pizza.jpg
 ---
 
-{% include back.html %}
+{% include postbuttons.html %}
   
 ## {{ page.title }}  
 

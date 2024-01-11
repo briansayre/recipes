@@ -6,7 +6,7 @@ tags: Breakfast Yummy
 img: /assets/img/monkey-bread.jpg
 ---
 
-{% include back.html %}
+{% include postbuttons.html %}
   
 ## {{ page.title }}  
 

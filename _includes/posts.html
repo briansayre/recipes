@@ -2,7 +2,7 @@
     {% assign id = 0 %}
     {% for post in site.posts %}
     {% assign id = id | plus:1 %}
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="{{id}}">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="{{ id }}">
         <a href="{{ site.baseurl }}{{ post.url }}">
             <div class="card is-shadowless">
                 <div class="card-image">
