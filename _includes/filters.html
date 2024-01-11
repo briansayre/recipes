@@ -34,7 +34,7 @@
     var dropdownText = document.querySelector('#dropdown-text');
     dropdownItems.forEach(function(item) {
       item.addEventListener("click", function() {
-        dropdownText.innerHTML.value = item.innerHTML;
+        dropdownText.innerHTML = item.innerHTML;
       });
     });
   });
