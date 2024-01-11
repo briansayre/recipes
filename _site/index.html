@@ -6,114 +6,199 @@
     <title>Sayre Recipes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://localhost:4000/recipes/assets/styles.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="http://localhost:4000/recipes/assets/img/favicon.ico">
 </head>
 
 <body>
-    <section>
+    <div class="has-text-centered is-unselectable">
+        <h1 class="title has-text-success-dark" id="header">
+            <a href="/recipes/">
+                Sayre Recipes
+            </a>
+        </h1>
+    </div>
+
+    <div class="container content">
         <script type="text/javascript">
   function filterUsingCategory(selectedCategory) {
     var id = 0;
-    
-      var cats = ["dessert"]
 
-      var postDiv = document.getElementById(++id);
-      postDiv.style.display =
-        (selectedCategory == 'All' || cats.includes(selectedCategory))
-          ? 'unset'
-          : 'none';
     
-      var cats = ["breakfast","yummy"]
-
-      var postDiv = document.getElementById(++id);
-      postDiv.style.display =
-        (selectedCategory == 'All' || cats.includes(selectedCategory))
-          ? 'unset'
-          : 'none';
+    var cats = ["Dinner"]
+    var postDiv = document.getElementById(++id);
+    postDiv.style.display = (selectedCategory == 'All' || cats.includes(selectedCategory)) ? 'unset' : 'none';
+    
+    var cats = ["Dessert","Yummy"]
+    var postDiv = document.getElementById(++id);
+    postDiv.style.display = (selectedCategory == 'All' || cats.includes(selectedCategory)) ? 'unset' : 'none';
+    
+    var cats = ["Breakfast","Yummy"]
+    var postDiv = document.getElementById(++id);
+    postDiv.style.display = (selectedCategory == 'All' || cats.includes(selectedCategory)) ? 'unset' : 'none';
     
   }
+  function filterUsingSearch(searchText) {
+    var id = 0;
+
+    
+    var title = "Hot Honey Pizza"
+    var postDiv = document.getElementById(++id);
+    postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
+    
+    var title = "Creme Brulee"
+    var postDiv = document.getElementById(++id);
+    postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
+    
+    var title = "Monkey Bread"
+    var postDiv = document.getElementById(++id);
+    postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
+    
+  }
+  window.addEventListener("DOMContentLoaded", (event) => {
+    var input = document.getElementById("search-text");
+    input.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("search-button").click();
+      }
+    });
+  });
 </script>
 
-<div class="container">
-    <a href="/recipes/" class="navbar-item">
-        <h1 class="title block">Sayre Recipes </h1>
-    </a>
-    <div class="block">
-        <button id="All" class="button" onclick="filterUsingCategory('All')">
-            Show All Posts
-        </button>
-        
-        
-        
-        <button id="breakfast" class="button" onclick="filterUsingCategory(this.id)">
-           breakfast
-        </button>
-        
-        
-        <button id="dessert" class="button" onclick="filterUsingCategory(this.id)">
-           dessert
-        </button>
-        
-        
-        <button id="yummy" class="button" onclick="filterUsingCategory(this.id)">
-           yummy
-        </button>
-        
+<div class="block">
+  <div class="is-flex is-flex-direction-row	is-flex-wrap-wrap	is-justify-content-space-between is-align-content-flex-start">
+    <div class="buttons is-flex-grow-0">
+      <button id="All" class="button is-outlined" onclick="filterUsingCategory('All')">
+          Show All Posts
+      </button>
+      
+      
+      
+      <button id="Breakfast" class="button is-light" onclick="filterUsingCategory(this.id)">
+          Breakfast
+      </button>
+      
+      
+      <button id="Dessert" class="button is-light" onclick="filterUsingCategory(this.id)">
+          Dessert
+      </button>
+      
+      
+      <button id="Dinner" class="button is-light" onclick="filterUsingCategory(this.id)">
+          Dinner
+      </button>
+      
+      
+      <button id="Yummy" class="button is-light" onclick="filterUsingCategory(this.id)">
+          Yummy
+      </button>
+      
     </div>
-    <div class="block columns is-multiline is-mobile">
-        
-        
-        
-        <div class="column" id="1">
-            <a href="/recipes/2024/01/08/creme-brulee.html">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image">
-                            <img src="/recipes/assets/img/creme-brulee.jpg" class="card-img" alt="image" />
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="media-content">
-                            <p class="title is-4">Creme Brulee</p>
-                        </div>
-                        <div class="content">
-                            
-                            <span class="tag"> dessert </span>
-                            
-                        </div>
-                    </div>
-                </div>
-            </a>
+    <div class="is-flex-grow-1">
+      <div id="seach-div" class="field has-addons is-hidden-touch" style="float: right;">
+        <div class="control">
+          <input class="input" type="text" id="search-text" placeholder="Search recipes" />
         </div>
-        
-        
-        <div class="column" id="2">
-            <a href="/recipes/2024/01/07/monkey-bread.html">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image">
-                            <img src="/recipes/assets/img/monkey-bread.jpg" class="card-img" alt="image" />
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="media-content">
-                            <p class="title is-4">Monkey Bread</p>
-                        </div>
-                        <div class="content">
-                            
-                            <span class="tag"> breakfast </span>
-                            
-                            <span class="tag"> yummy </span>
-                            
-                        </div>
-                    </div>
-                </div>
-            </a>
+        <div class="control">
+          <a class="button is-info has-background-success-dark" type="submit" id="search-button" onclick="filterUsingSearch(document.getElementById('search-text').value)">
+            Search
+          </a>
         </div>
-        
+      </div>
+      <div id="seach-div" class="field has-addons is-hidden-desktop" style="float: none;">
+        <div class="control is-expanded">
+          <input class="input" type="text" id="search-text" placeholder="Search recipes" />
+        </div>
+        <div class="control">
+          <a class="button is-info has-background-success-dark" type="submit" id="search-button" onclick="filterUsingSearch(document.getElementById('search-text').value)">
+            Search
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
-    </section>
+<div class="block columns is-multiline is-mobile">
+    
+    
+    
+    <div class="column is-12-mobile is-4-tablet is-3-widescreen" id="1">
+        <a href="/recipes/2024/01/10/hot-honey-pizza.html">
+            <div class="card is-shadowless">
+                <div class="card-image">
+                    <figure class="image is-4by5">
+                        <img class="card-img" src="/recipes/assets/img/hot-honey-pizza.jpg" alt="image" />
+                    </figure>
+                </div>
+                <div class="card-content pl-0 pt-4">
+                    <div class="media-content">
+                        <p class="title is-5 has-text-success-dark" id="post-title">Hot Honey Pizza</p>
+                    </div>
+                    <div class="content pt-2">
+                        
+                        <span class="tag"> Dinner </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    
+    <div class="column is-12-mobile is-4-tablet is-3-widescreen" id="2">
+        <a href="/recipes/2024/01/08/creme-brulee-copy.html">
+            <div class="card is-shadowless">
+                <div class="card-image">
+                    <figure class="image is-4by5">
+                        <img class="card-img" src="/recipes/assets/img/creme-brulee.jpg" alt="image" />
+                    </figure>
+                </div>
+                <div class="card-content pl-0 pt-4">
+                    <div class="media-content">
+                        <p class="title is-5 has-text-success-dark" id="post-title">Creme Brulee</p>
+                    </div>
+                    <div class="content pt-2">
+                        
+                        <span class="tag"> Dessert </span>
+                        
+                        <span class="tag"> Yummy </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    
+    <div class="column is-12-mobile is-4-tablet is-3-widescreen" id="3">
+        <a href="/recipes/2024/01/07/monkey-bread.html">
+            <div class="card is-shadowless">
+                <div class="card-image">
+                    <figure class="image is-4by5">
+                        <img class="card-img" src="/recipes/assets/img/monkey-bread.jpg" alt="image" />
+                    </figure>
+                </div>
+                <div class="card-content pl-0 pt-4">
+                    <div class="media-content">
+                        <p class="title is-5 has-text-success-dark" id="post-title">Monkey Bread</p>
+                    </div>
+                    <div class="content pt-2">
+                        
+                        <span class="tag"> Breakfast </span>
+                        
+                        <span class="tag"> Yummy </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+</div>
+
+    </div>
+
     <footer>
     </footer>
 </body>

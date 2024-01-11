@@ -6,15 +6,28 @@
     <title>Monkey Bread</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://localhost:4000/recipes/assets/styles.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="http://localhost:4000/recipes/assets/img/favicon.ico">
 </head>
 
 <body>
-    <a  href="/recipes/" class="navbar-item">
-        <h1 class="title block">Sayre Recipes </h1>
+    <div class="has-text-centered is-unselectable">
+        <h1 class="title has-text-success-dark" id="header">
+            <a href="/recipes/">
+                Sayre Recipes
+            </a>
+        </h1>
+    </div>
+
+    <div class="container content">
+        <p><button class="button">
+    <a href="/recipes/">
+        <span class="has-text-dark">Back</span>
     </a>
-    <h2>Monkey Bread</h2>
-    <section>
-        <p><img src="/recipes/assets/img/monkey-bread.jpg" alt="Image" /></p>
+</button></p>
+
+<h2 id="monkey-bread">Monkey Bread</h2>
+
+<p><img class="recipe-img" src="/recipes/assets/img/monkey-bread.jpg" alt="Monkey Bread Image" /></p>
 
 <h2 id="ingredients">Ingredients</h2>
 <ul>
@@ -38,7 +51,8 @@
 <h2 id="notes">Notes</h2>
 <p>A birthday tradition.</p>
 
-    </section>
+    </div>
+
     <footer>
     </footer>
 </body>
