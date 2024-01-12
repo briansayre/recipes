@@ -1,11 +1,11 @@
 <script type="text/javascript">
 
     function filterUsingTag(selectedTag) {
-        var id = 0;
         var dropdownText = document.querySelector('#dropdown-text');
         dropdownText.innerHTML = selectedTag;
-        toggleClearButton((selectedTag == 'All'));
+        showClearButton((selectedTag == 'All'));
 
+        var id = 0;
         {% for post in site.posts %}
         var tags = {{ post.tags | jsonify }}
         var postDiv = document.getElementById(++id);
@@ -14,11 +14,14 @@
     }
 
     function filterUsingSearch(searchText) {
-        var id = 0;
         var dropdownText = document.querySelector('#dropdown-text');
         dropdownText.innerHTML = (searchText == '') ? 'All' : `Search results for "${searchText}"`;
-        toggleClearButton((searchText == ''));
+        showClearButton((searchText == ''));
 
+        document.getElementById("search-text").value = searchText;
+        document.getElementById("search-text-mobile").value = searchText;
+
+        var id = 0;
         {% for post in site.posts %}
         var title = "{{ post.title }}"
         var postDiv = document.getElementById(++id);
@@ -26,7 +29,7 @@
         {% endfor %}
     }
 
-    function toggleClearButton(hide) {
+    function showClearButton(hide) {
         var clearButton = document.querySelector('#clear-button');
         if (hide) {
             clearButton.classList.add("is-hidden");
@@ -57,6 +60,9 @@
         dropdown.addEventListener('click', function (event) {
             event.stopPropagation();
             dropdown.classList.toggle('is-active');
+            var icon = document.getElementById('tag-icon');
+            icon.classList.toggle('fa-angle-down');
+            icon.classList.toggle('fa-angle-up');
         });
 
     });
@@ -70,21 +76,21 @@
                 <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
                     <span id="dropdown-text">Browse by type</span>
                     <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        <i id="tag-icon" class="fas fa-angle-down" aria-hidden="true"></i>
                     </span>
                 </button>
             </div>
             <div class="dropdown-menu" id="dropdown-menu" role="menu">
                 <div class="dropdown-content">
-                    <a href="#" class="dropdown-item" id="All" onclick="filterUsingTag('All')">
+                    <div class="dropdown-item is-clickable" id="All" onclick="filterUsingTag('All')">
                         All
-                    </a>
+                    </div>
                     {% assign tags = site.tags | sort %}
                     {% for tag in tags %}
                     {% assign t = tag | first %}
-                    <a href="#" class="dropdown-item" id="{{ t }}" onclick="filterUsingTag(this.id)">
+                    <div class="dropdown-item is-clickable" id="{{ t }}" onclick="filterUsingTag(this.id)">
                         {{ t }}
-                    </a>
+                    </div>
                     {% endfor %}
                 </div>
             </div>

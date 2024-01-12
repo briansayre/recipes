@@ -12,22 +12,22 @@
 
 <body>
     <div class="has-text-centered is-unselectable">
-        <h1 class="title has-text-success-dark" id="header">
+        <h1 class="title is-size-3 has-text-success-dark my-5" id="header">
             <a href="/recipes/">
                 Sayre Recipes
             </a>
         </h1>
     </div>
 
-    <div class="container content px-4">
+    <div class="container content px-4 pb-6">
         <script type="text/javascript">
 
     function filterUsingTag(selectedTag) {
-        var id = 0;
         var dropdownText = document.querySelector('#dropdown-text');
         dropdownText.innerHTML = selectedTag;
-        toggleClearButton((selectedTag == 'All'));
+        showClearButton((selectedTag == 'All'));
 
+        var id = 0;
         
         var tags = ["Dinner"]
         var postDiv = document.getElementById(++id);
@@ -44,11 +44,14 @@
     }
 
     function filterUsingSearch(searchText) {
-        var id = 0;
         var dropdownText = document.querySelector('#dropdown-text');
         dropdownText.innerHTML = (searchText == '') ? 'All' : `Search results for "${searchText}"`;
-        toggleClearButton((searchText == ''));
+        showClearButton((searchText == ''));
 
+        document.getElementById("search-text").value = searchText;
+        document.getElementById("search-text-mobile").value = searchText;
+
+        var id = 0;
         
         var title = "Hot Honey Pizza"
         var postDiv = document.getElementById(++id);
@@ -64,7 +67,7 @@
         
     }
 
-    function toggleClearButton(hide) {
+    function showClearButton(hide) {
         var clearButton = document.querySelector('#clear-button');
         if (hide) {
             clearButton.classList.add("is-hidden");
@@ -95,6 +98,9 @@
         dropdown.addEventListener('click', function (event) {
             event.stopPropagation();
             dropdown.classList.toggle('is-active');
+            var icon = document.getElementById('tag-icon');
+            icon.classList.toggle('fa-angle-down');
+            icon.classList.toggle('fa-angle-up');
         });
 
     });
@@ -108,36 +114,36 @@
                 <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
                     <span id="dropdown-text">Browse by type</span>
                     <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        <i id="tag-icon" class="fas fa-angle-down" aria-hidden="true"></i>
                     </span>
                 </button>
             </div>
             <div class="dropdown-menu" id="dropdown-menu" role="menu">
                 <div class="dropdown-content">
-                    <a href="#" class="dropdown-item" id="All" onclick="filterUsingTag('All')">
+                    <div class="dropdown-item is-clickable" id="All" onclick="filterUsingTag('All')">
                         All
-                    </a>
+                    </div>
                     
                     
                     
-                    <a href="#" class="dropdown-item" id="Breakfast" onclick="filterUsingTag(this.id)">
+                    <div class="dropdown-item is-clickable" id="Breakfast" onclick="filterUsingTag(this.id)">
                         Breakfast
-                    </a>
+                    </div>
                     
                     
-                    <a href="#" class="dropdown-item" id="Dessert" onclick="filterUsingTag(this.id)">
+                    <div class="dropdown-item is-clickable" id="Dessert" onclick="filterUsingTag(this.id)">
                         Dessert
-                    </a>
+                    </div>
                     
                     
-                    <a href="#" class="dropdown-item" id="Dinner" onclick="filterUsingTag(this.id)">
+                    <div class="dropdown-item is-clickable" id="Dinner" onclick="filterUsingTag(this.id)">
                         Dinner
-                    </a>
+                    </div>
                     
                     
-                    <a href="#" class="dropdown-item" id="Yummy" onclick="filterUsingTag(this.id)">
+                    <div class="dropdown-item is-clickable" id="Yummy" onclick="filterUsingTag(this.id)">
                         Yummy
-                    </a>
+                    </div>
                     
                 </div>
             </div>
@@ -185,9 +191,11 @@
                         <p class="title is-5 has-text-success-dark post-title">Hot Honey Pizza</p>
                     </div>
                     <div class="content pt-2">
-                        
-                        <span class="tag"> Dinner </span>
-                        
+                        <div class="tags">
+                            
+                            <span class="tag"> Dinner </span>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -208,11 +216,13 @@
                         <p class="title is-5 has-text-success-dark post-title">Creme Brulee</p>
                     </div>
                     <div class="content pt-2">
-                        
-                        <span class="tag"> Dessert </span>
-                        
-                        <span class="tag"> Yummy </span>
-                        
+                        <div class="tags">
+                            
+                            <span class="tag"> Dessert </span>
+                            
+                            <span class="tag"> Yummy </span>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -233,11 +243,13 @@
                         <p class="title is-5 has-text-success-dark post-title">Monkey Bread</p>
                     </div>
                     <div class="content pt-2">
-                        
-                        <span class="tag"> Breakfast </span>
-                        
-                        <span class="tag"> Yummy </span>
-                        
+                        <div class="tags">
+                            
+                            <span class="tag"> Breakfast </span>
+                            
+                            <span class="tag"> Yummy </span>
+                            
+                        </div>
                     </div>
                 </div>
             </div>

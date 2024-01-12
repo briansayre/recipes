@@ -13,10 +13,12 @@ img: /assets/img/TODO.jpg
 <img class="recipe-img" src="{{ site.baseurl }}{{ page.img }}" alt="{{ page.title }} Image">
 
 ## Ingredients
-- 
+
+-
   
 ## Directions
-1. 
+
+1.
 
 ## Notes
 

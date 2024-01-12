@@ -13,6 +13,7 @@ img: /assets/img/monkey-bread.jpg
 <img class="recipe-img" src="{{ site.baseurl }}{{ page.img }}" alt="{{ page.title }} Image">
 
 ## Ingredients
+
 - 3 cans buttermilk biscuits (the non-flaky ones)
 - 1 cup granulated sugar
 - 2 to 3 tsp. cinnamon
@@ -20,6 +21,7 @@ img: /assets/img/monkey-bread.jpg
 - 1/2 cup brown sugar
   
 ## Directions
+
 1. Preheat the oven to 350F.
 2. Open up all 3 cans of biscuits and cut each biscuit into quarters.
 3. Combine the white sugar with 2 to 3 teaspoons of cinnamon. (3 teaspoons of cinnamon gives it a fairly strong cinnamon flavor. If you're not so hot on cinnamon, cut it back to 2 teaspoons.) Dump these into a 1 gallon zip-top bag and shake to combine.
@@ -28,4 +30,5 @@ img: /assets/img/monkey-bread.jpg
 6. Bake for about 35 to 40 minutes until the crust is a deep dark brown on top. When it's finished cooking, remove it from the oven. If you have the willpower, allow it to cool
   
 ## Notes
+
 A birthday tradition.

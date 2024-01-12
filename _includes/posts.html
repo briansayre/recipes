@@ -15,9 +15,11 @@
                         <p class="title is-5 has-text-success-dark post-title">{{ post.title }}</p>
                     </div>
                     <div class="content pt-2">
-                        {% for tag in post.tags %}
-                        <span class="tag"> {{ tag }} </span>
-                        {% endfor %}
+                        <div class="tags">
+                            {% for tag in post.tags %}
+                            <span class="tag"> {{ tag }} </span>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
