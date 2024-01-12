@@ -2,7 +2,7 @@
 layout: default
 title: "Hot Honey Pizza"
 date: 2024-01-10
-tags: Dinner
+tags: Dinner Pizza Chicken
 img: /assets/img/hot-honey-pizza.jpg
 ---
 
