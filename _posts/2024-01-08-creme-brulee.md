@@ -3,14 +3,14 @@ layout: default
 title: "Creme Brulee"
 date: 2024-01-08
 tags: Dessert Yummy
-img: /assets/img/creme-brulee.jpg
+imgfolder: creme-brulee
 ---
 
 {% include postbuttons.html %}
   
-## {{ page.title }}  
+# {{ page.title }}  
 
-<img class="recipe-img" src="{{ site.baseurl }}{{ page.img }}" alt="{{ page.title }} Image">
+<img class="recipe-img" src="{{ site.baseurl }}/assets/img/{{ page.imgfolder }}/1.jpg" alt="{{ page.title }} Image">
 
 ## Ingredients
 
@@ -27,3 +27,7 @@ img: /assets/img/creme-brulee.jpg
 3. Bake for 30 to 40 minutes, or until centers are barely set. Cool completely. Refrigerate for several hours and up to a couple of days. Image of cream out of the oven barely set for making Vanilla Crème Brûlée
 4. When ready to serve, top each custard with about a teaspoon of sugar in a thin layer. Image of sugar being poured on top for making Vanilla Crème Brûlée
 5. Place ramekins in a broiler 2 to 3 inches from heat source. Turn on broiler. Cook until sugar melts and browns or even blackens a bit, about 5 minutes. Serve within 2 hours.
+
+## Images
+
+{% include postimages.html %}

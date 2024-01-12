@@ -3,14 +3,14 @@ layout: default
 title: "Hot Honey Pizza"
 date: 2024-01-10
 tags: Dinner Pizza Chicken
-img: /assets/img/hot-honey-pizza.jpg
+imgfolder: hot-honey-pizza
 ---
 
 {% include postbuttons.html %}
   
-## {{ page.title }}  
+# {{ page.title }}
 
-<img class="recipe-img" src="{{ site.baseurl }}{{ page.img }}" alt="{{ page.title }} Image">
+<img class="recipe-img" src="{{ site.baseurl }}/assets/img/{{ page.imgfolder }}/1.jpg" alt="{{ page.title }} Image">
 
 ## Ingredients
 
@@ -35,3 +35,7 @@ img: /assets/img/hot-honey-pizza.jpg
 6. Top with onions, chicken, and finally mozzerella cheese.
 7. Bake for about 15 minutes or until cheese is slightly brown.
 8. Once done, top with a drizzle of honey and ranch.
+
+## Images
+
+{% include postimages.html %}

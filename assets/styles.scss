@@ -43,8 +43,13 @@ html {
 
 h2 {
     padding-bottom: 0.3em;
-    font-size: 1.5em;
     border-bottom: 1px solid #eaecef;
+    font-family: 'Young Serif', serif;
+    color: $primary !important;
+}
+
+h1 {
+    padding-bottom: 0.3em;
     font-family: 'Young Serif', serif;
     color: $primary !important;
 }
@@ -52,17 +57,17 @@ h2 {
 .recipe-img {
     object-fit: cover;
     height: 300px;
+    width: 100%;
     border-radius: 4px;
-    border: 1px solid rgb(240, 240, 240);
-    margin: 30px 30px 15px 30px;
-    transform: rotate(3deg);
-    padding: 15px 15px 70px 15px;
-    -webkit-box-shadow: 5px 5px 33px -18px rgba(112, 112, 112, 0.79);
-    -moz-box-shadow: 5px 5px 33px -18px rgba(112, 112, 112, 0.79);
-    box-shadow: 5px 5px 33px -18px rgba(112, 112, 112, 0.79);
 }
 
 .card-img {
     object-fit: cover;
     border-radius: 4px;
+}
+
+.gallery-img {
+    object-fit: cover;
+    border-radius: 4px;
+    height: 200px;
 }

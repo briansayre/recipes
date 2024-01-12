@@ -20,18 +20,18 @@
     </div>
 
     <div class="container content px-4 pb-6">
-        <p><button class="button has-text-dark">
-    <a href="/recipes/">
+        <p><a href="/recipes/">
+    <button class="button has-text-dark">
         <span class="icon">
             <i class="fas fa-angle-left has-text-dark"></i>
         </span>
         <span class="has-text-dark">Back</span>
-    </a>
-</button></p>
+    </button>
+</a></p>
 
-<h2 id="creme-brulee">Creme Brulee</h2>
+<h1 id="creme-brulee">Creme Brulee</h1>
 
-<p><img class="recipe-img" src="/recipes/assets/img/creme-brulee.jpg" alt="Creme Brulee Image" /></p>
+<p><img class="recipe-img" src="/recipes/assets/img/creme-brulee/1.jpg" alt="Creme Brulee Image" /></p>
 
 <h2 id="ingredients">Ingredients</h2>
 
@@ -52,6 +52,63 @@
   <li>When ready to serve, top each custard with about a teaspoon of sugar in a thin layer. Image of sugar being poured on top for making Vanilla Crème Brûlée</li>
   <li>Place ramekins in a broiler 2 to 3 inches from heat source. Turn on broiler. Cook until sugar melts and browns or even blackens a bit, about 5 minutes. Serve within 2 hours.</li>
 </ol>
+
+<h2 id="images">Images</h2>
+
+<script type="text/javascript">
+
+    function openModal(id) {
+        document.getElementById(id).classList.add("is-active");
+    }
+
+    function closeModals() {
+        document.querySelectorAll(".modal").forEach(($el) => {
+            $el.classList.remove("is-active");
+        });
+    }
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+
+
+        document.querySelectorAll(".modal-background,.modal-close,.modal-card-head,.delete,.modal-card-foot").forEach(($el) => {
+            const $modal = $el.closest(".modal");
+            $el.addEventListener("click", () => {
+                $modal.classList.remove("is-active");
+            });
+        });
+
+        document.addEventListener("keydown", (event) => {
+            const e = event || window.event;
+            if (e.keyCode === 27) {
+                closeModals();
+            }
+        });
+    });
+    
+</script>
+
+<div class="is-flex is-flex-wrap-wrap">
+    
+    
+    <div class="m-2 is-clickable" onclick="openModal('1')">
+        <img class="gallery-img" src="/recipes/assets/img/creme-brulee/1.jpg" alt="image" />
+    </div>
+    <div class="modal" id="1">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <img class="modal-gallery-img" src="/recipes/assets/img/creme-brulee/1.jpg" alt="image" />
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
 
     </div>
 </body>

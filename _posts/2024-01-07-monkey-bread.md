@@ -3,14 +3,14 @@ layout: default
 title: "Monkey Bread"
 date: 2024-01-07
 tags: Breakfast Yummy Dessert
-img: /assets/img/monkey-bread.jpg
+imgfolder: monkey-bread
 ---
 
 {% include postbuttons.html %}
   
-## {{ page.title }}  
+# {{ page.title }}  
 
-<img class="recipe-img" src="{{ site.baseurl }}{{ page.img }}" alt="{{ page.title }} Image">
+<img class="recipe-img" src="{{ site.baseurl }}/assets/img/{{ page.imgfolder }}/1.jpg" alt="{{ page.title }} Image">
 
 ## Ingredients
 
@@ -32,3 +32,7 @@ img: /assets/img/monkey-bread.jpg
 ## Notes
 
 A birthday tradition.
+
+## Images
+
+{% include postimages.html %}
