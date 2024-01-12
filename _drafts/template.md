@@ -23,3 +23,15 @@ img: /assets/img/TODO.jpg
 ## Notes
 
 ## Source
+
+## Images
+
+{% include postimages.html %}
+
+## To Do
+
+- Name file appropiately
+- Add folder to assets/img/ with title
+- Upload at least 1.jpg
+- Update front matter
+- Fill out ingredients, directions, etc.
