@@ -1,92 +1,118 @@
 <script type="text/javascript">
-  function filterUsingTag(selectedTag) {
-    var id = 0;
 
-    {% for post in site.posts %}
-    var tags = {{ post.tags | jsonify }}
-    var postDiv = document.getElementById(++id);
-    postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
-    {% endfor %}
-  }
-  function filterUsingSearch(searchText) {
-    var id = 0;
+    function filterUsingTag(selectedTag) {
+        var id = 0;
+        var dropdownText = document.querySelector('#dropdown-text');
+        dropdownText.innerHTML = selectedTag;
+        toggleClearButton((selectedTag == 'All'));
 
-    {% for post in site.posts %}
-    var title = "{{ post.title }}"
-    var postDiv = document.getElementById(++id);
-    postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
-    {% endfor %}
-  }
-  window.addEventListener("DOMContentLoaded", (event) => {
-    var input = document.getElementById("search-text");
-    input.addEventListener("keypress", function(event) {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        document.getElementById("search-button").click();
-      }
+        {% for post in site.posts %}
+        var tags = {{ post.tags | jsonify }}
+        var postDiv = document.getElementById(++id);
+        postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
+        {% endfor %}
+    }
+
+    function filterUsingSearch(searchText) {
+        var id = 0;
+        var dropdownText = document.querySelector('#dropdown-text');
+        dropdownText.innerHTML = (searchText == '') ? 'All' : `Search results for "${searchText}"`;
+        toggleClearButton((searchText == ''));
+
+        {% for post in site.posts %}
+        var title = "{{ post.title }}"
+        var postDiv = document.getElementById(++id);
+        postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
+        {% endfor %}
+    }
+
+    function toggleClearButton(hide) {
+        var clearButton = document.querySelector('#clear-button');
+        if (hide) {
+            clearButton.classList.add("is-hidden");
+        } else {
+            clearButton.classList.remove("is-hidden");
+        }
+    }
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+
+        var input = document.getElementById("search-text");
+        input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("search-button").click();
+            }
+        });
+
+        var input = document.getElementById("search-text-mobile");
+        input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("search-button-mobile").click();
+            }
+        });
+
+        var dropdown = document.querySelector('.dropdown');
+        dropdown.addEventListener('click', function (event) {
+            event.stopPropagation();
+            dropdown.classList.toggle('is-active');
+        });
+
     });
-    var dropdown = document.querySelector('.dropdown');
-    dropdown.addEventListener('click', function(event) {
-      event.stopPropagation();
-      dropdown.classList.toggle('is-active');
-    });
-    var dropdownItems = document.querySelectorAll('.dropdown-item');
-    var dropdownText = document.querySelector('#dropdown-text');
-    dropdownItems.forEach(function(item) {
-      item.addEventListener("click", function() {
-        dropdownText.innerHTML = item.innerHTML;
-      });
-    });
-  });
+
 </script>
 
-<div class="block columns">
-  <div class="column">
-    <div class="dropdown">
-      <div class="dropdown-trigger">
-        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-          <span id="dropdown-text">Browse by type</span>
-          <span class="icon is-small">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </button>
-      </div>
-      <div class="dropdown-menu" id="dropdown-menu" role="menu">
-        <div class="dropdown-content">
-          <a href="#" class="dropdown-item" id="All" onclick="filterUsingTag('All')">
-            All
-          </a>
-          {% assign tags = site.tags | sort %}
-          {% for tag in tags %}
-          {% assign t = tag | first %}
-          <a href="#" class="dropdown-item" id="{{ t }}" onclick="filterUsingTag(this.id)">
-            {{ t }}
-          </a>
-          {% endfor %}
+<div class="block columns is-reversed-mobile">
+    <div class="column">
+        <div class="dropdown">
+            <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span id="dropdown-text">Browse by type</span>
+                    <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                    <a href="#" class="dropdown-item" id="All" onclick="filterUsingTag('All')">
+                        All
+                    </a>
+                    {% assign tags = site.tags | sort %}
+                    {% for tag in tags %}
+                    {% assign t = tag | first %}
+                    <a href="#" class="dropdown-item" id="{{ t }}" onclick="filterUsingTag(this.id)">
+                        {{ t }}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-      </div>
+        <button class="delete is-hidden" id="clear-button" onclick="filterUsingSearch('')"></button>
     </div>
-  </div>
-  <div class="column">
-    <div id="seach-div" class="field has-addons is-hidden-touch" style="float: right;">
-      <div class="control">
-        <input class="input" type="text" id="search-text" placeholder="Search recipes">
-      </div>
-      <div class="control">
-        <a class="button is-info has-background-success-dark" type="submit" id="search-button" onclick="filterUsingSearch(document.getElementById('search-text').value)">
-          Search
-        </a>
-      </div>
+    <div class="column">
+        <div id="seach-div" class="field has-addons is-hidden-mobile" style="float: right;">
+            <div class="control">
+                <input class="input" type="text" id="search-text" placeholder="Search recipes">
+            </div>
+            <div class="control">
+                <a class="button is-info has-background-success-dark" type="submit" id="search-button"
+                    onclick="filterUsingSearch(document.getElementById('search-text').value)">
+                    Search
+                </a>
+            </div>
+        </div>
+        <div id="seach-div" class="field has-addons is-hidden-tablet" style="float: none;">
+            <div class="control is-expanded">
+                <input class="input" type="text" id="search-text-mobile" placeholder="Search recipes">
+            </div>
+            <div class="control">
+                <a class="button is-info has-background-success-dark" type="submit" id="search-button-mobile"
+                    onclick="filterUsingSearch(document.getElementById('search-text-mobile').value)">
+                    Search
+                </a>
+            </div>
+        </div>
     </div>
-    <div id="seach-div" class="field has-addons is-hidden-desktop" style="float: none;">
-      <div class="control is-expanded">
-        <input class="input" type="text" id="search-text" placeholder="Search recipes">
-      </div>
-      <div class="control">
-        <a class="button is-info has-background-success-dark" type="submit" id="search-button" onclick="filterUsingSearch(document.getElementById('search-text').value)">
-          Search
-        </a>
-      </div>
-    </div>
-  </div>
 </div>
