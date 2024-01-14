@@ -1,16 +1,16 @@
 ---
 layout: default
-title: "TODO"
+title: "Title Here"
 date: YYYY-MM-DD
 tags: TODO
-img: /assets/img/TODO.jpg
+imgfolder: title-here
 ---
 
 {% include postbuttons.html %}
   
-## {{ page.title }}  
+# {{ page.title }}  
 
-<img class="recipe-img" src="{{ site.baseurl }}{{ page.img }}" alt="{{ page.title }} Image">
+<img class="recipe-img" src="{{ site.baseurl }}/assets/img/{{ page.imgfolder }}/1.jpg" alt="{{ page.title }} Image">
 
 ## Ingredients
 
@@ -28,10 +28,11 @@ img: /assets/img/TODO.jpg
 
 {% include postimages.html %}
 
-## To Do
+## To Do (delete when done)
 
-- Name file appropiately
-- Add folder to assets/img/ with title
-- Upload at least 1.jpg
+- Copy this file into /_posts
+- Name file appropiately (YYYY-MM-DD-title-here.md)
+- Create a folder at assets/img/ with the title as the name (title-here)
+- Upload at least 1.jpg to the folder
 - Update front matter
 - Fill out ingredients, directions, etc.

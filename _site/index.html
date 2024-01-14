@@ -29,6 +29,10 @@
 
         var id = 0;
         
+        var tags = ["Breakfact"]
+        var postDiv = document.getElementById(++id);
+        postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
+        
         var tags = ["Dinner","Pizza","Chicken"]
         var postDiv = document.getElementById(++id);
         postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
@@ -37,7 +41,7 @@
         var postDiv = document.getElementById(++id);
         postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
         
-        var tags = ["Breakfast","Yummy","Dessert"]
+        var tags = ["Breakfast","Yummy","Dessert","Yes","No","Maybe","So","Def"]
         var postDiv = document.getElementById(++id);
         postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
         
@@ -52,6 +56,10 @@
         document.getElementById("search-text-mobile").value = searchText;
 
         var id = 0;
+        
+        var title = "Pancakes"
+        var postDiv = document.getElementById(++id);
+        postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
         
         var title = "Hot Honey Pizza"
         var postDiv = document.getElementById(++id);
@@ -126,6 +134,11 @@
                     
                     
                     
+                    <div class="dropdown-item is-clickable" id="Breakfact" onclick="filterUsingTag(this.id)">
+                        Breakfact
+                    </div>
+                    
+                    
                     <div class="dropdown-item is-clickable" id="Breakfast" onclick="filterUsingTag(this.id)">
                         Breakfast
                     </div>
@@ -133,6 +146,11 @@
                     
                     <div class="dropdown-item is-clickable" id="Chicken" onclick="filterUsingTag(this.id)">
                         Chicken
+                    </div>
+                    
+                    
+                    <div class="dropdown-item is-clickable" id="Def" onclick="filterUsingTag(this.id)">
+                        Def
                     </div>
                     
                     
@@ -146,8 +164,28 @@
                     </div>
                     
                     
+                    <div class="dropdown-item is-clickable" id="Maybe" onclick="filterUsingTag(this.id)">
+                        Maybe
+                    </div>
+                    
+                    
+                    <div class="dropdown-item is-clickable" id="No" onclick="filterUsingTag(this.id)">
+                        No
+                    </div>
+                    
+                    
                     <div class="dropdown-item is-clickable" id="Pizza" onclick="filterUsingTag(this.id)">
                         Pizza
+                    </div>
+                    
+                    
+                    <div class="dropdown-item is-clickable" id="So" onclick="filterUsingTag(this.id)">
+                        So
+                    </div>
+                    
+                    
+                    <div class="dropdown-item is-clickable" id="Yes" onclick="filterUsingTag(this.id)">
+                        Yes
                     </div>
                     
                     
@@ -189,6 +227,31 @@
     
     
     <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="1">
+        <a href="/recipes/2024/01/13/pancakes.html">
+            <div class="card is-shadowless">
+                <div class="card-image">
+                    <figure class="image is-4by5 m-0">
+                        <img class="card-img" src="/recipes/assets/img/pancakes/1.jpg" alt="Pancakes Image" />
+                    </figure>
+                </div>
+                <div class="card-content px-0 py-4">
+                    <div class="media-content">
+                        <p class="title is-5 has-text-success-dark post-title">Pancakes</p>
+                    </div>
+                    <div class="content pt-2">
+                        <div class="tags">
+                            
+                            <span class="tag"> Breakfact </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="2">
         <a href="/recipes/2024/01/10/hot-honey-pizza.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -217,7 +280,7 @@
     </div>
     
     
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="2">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="3">
         <a href="/recipes/2024/01/08/creme-brulee.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -244,7 +307,7 @@
     </div>
     
     
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="3">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="4">
         <a href="/recipes/2024/01/07/monkey-bread.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -264,6 +327,16 @@
                             <span class="tag"> Yummy </span>
                             
                             <span class="tag"> Dessert </span>
+                            
+                            <span class="tag"> Yes </span>
+                            
+                            <span class="tag"> No </span>
+                            
+                            <span class="tag"> Maybe </span>
+                            
+                            <span class="tag"> So </span>
+                            
+                            <span class="tag"> Def </span>
                             
                         </div>
                     </div>

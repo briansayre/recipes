@@ -2,7 +2,7 @@
 layout: default
 title: "Monkey Bread"
 date: 2024-01-07
-tags: Breakfast Yummy Dessert
+tags: Breakfast Yummy Dessert Yes No Maybe So Def
 imgfolder: monkey-bread
 ---
 
