@@ -2,7 +2,7 @@
 layout: default
 title: "Creme Brulee"
 date: 2024-01-08
-tags: Dessert Yummy
+tags: Dessert
 imgfolder: creme-brulee
 ---
 

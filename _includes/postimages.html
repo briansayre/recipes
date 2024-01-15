@@ -35,7 +35,7 @@
 <div class="is-flex is-flex-wrap-wrap">
     {% for file in site.static_files %}
     {% if file.path contains title and file.extname == '.jpg' %}
-    <div class="m-2 is-clickable" onclick="openModal('{{ file.basename }}')">
+    <div class="m-3 is-clickable" onclick="openModal('{{ file.basename }}')">
         <img class="gallery-img" src="{{ site.baseurl }}{{ file.path }}" alt="image">
     </div>
     <div class="modal" id="{{ file.basename }}">

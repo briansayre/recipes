@@ -29,7 +29,7 @@
 
         var id = 0;
         
-        var tags = ["Breakfact"]
+        var tags = ["Breakfast"]
         var postDiv = document.getElementById(++id);
         postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
         
@@ -37,11 +37,11 @@
         var postDiv = document.getElementById(++id);
         postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
         
-        var tags = ["Dessert","Yummy"]
+        var tags = ["Dessert"]
         var postDiv = document.getElementById(++id);
         postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
         
-        var tags = ["Breakfast","Yummy","Dessert","Yes","No","Maybe","So","Def"]
+        var tags = ["Breakfast","Dessert"]
         var postDiv = document.getElementById(++id);
         postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
         
@@ -134,11 +134,6 @@
                     
                     
                     
-                    <div class="dropdown-item is-clickable" id="Breakfact" onclick="filterUsingTag(this.id)">
-                        Breakfact
-                    </div>
-                    
-                    
                     <div class="dropdown-item is-clickable" id="Breakfast" onclick="filterUsingTag(this.id)">
                         Breakfast
                     </div>
@@ -146,11 +141,6 @@
                     
                     <div class="dropdown-item is-clickable" id="Chicken" onclick="filterUsingTag(this.id)">
                         Chicken
-                    </div>
-                    
-                    
-                    <div class="dropdown-item is-clickable" id="Def" onclick="filterUsingTag(this.id)">
-                        Def
                     </div>
                     
                     
@@ -164,33 +154,8 @@
                     </div>
                     
                     
-                    <div class="dropdown-item is-clickable" id="Maybe" onclick="filterUsingTag(this.id)">
-                        Maybe
-                    </div>
-                    
-                    
-                    <div class="dropdown-item is-clickable" id="No" onclick="filterUsingTag(this.id)">
-                        No
-                    </div>
-                    
-                    
                     <div class="dropdown-item is-clickable" id="Pizza" onclick="filterUsingTag(this.id)">
                         Pizza
-                    </div>
-                    
-                    
-                    <div class="dropdown-item is-clickable" id="So" onclick="filterUsingTag(this.id)">
-                        So
-                    </div>
-                    
-                    
-                    <div class="dropdown-item is-clickable" id="Yes" onclick="filterUsingTag(this.id)">
-                        Yes
-                    </div>
-                    
-                    
-                    <div class="dropdown-item is-clickable" id="Yummy" onclick="filterUsingTag(this.id)">
-                        Yummy
                     </div>
                     
                 </div>
@@ -241,7 +206,7 @@
                     <div class="content pt-2">
                         <div class="tags">
                             
-                            <span class="tag"> Breakfact </span>
+                            <span class="tag"> Breakfast </span>
                             
                         </div>
                     </div>
@@ -297,8 +262,6 @@
                             
                             <span class="tag"> Dessert </span>
                             
-                            <span class="tag"> Yummy </span>
-                            
                         </div>
                     </div>
                 </div>
@@ -324,19 +287,7 @@
                             
                             <span class="tag"> Breakfast </span>
                             
-                            <span class="tag"> Yummy </span>
-                            
                             <span class="tag"> Dessert </span>
-                            
-                            <span class="tag"> Yes </span>
-                            
-                            <span class="tag"> No </span>
-                            
-                            <span class="tag"> Maybe </span>
-                            
-                            <span class="tag"> So </span>
-                            
-                            <span class="tag"> Def </span>
                             
                         </div>
                     </div>
