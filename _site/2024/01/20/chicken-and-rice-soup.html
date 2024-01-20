@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chicken and Rice Soup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/recipes/assets/styles.css">
+    <link rel="icon" type="image/x-icon" href="/recipes/assets/img/favicon.ico">
+    <script src="https://kit.fontawesome.com/2a65e6ebaf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="has-text-centered is-unselectable">
+        <h1 class="title is-size-3 has-text-success-dark my-5" id="header">
+            <a href="/recipes/">
+                Sayre Recipes
+            </a>
+        </h1>
+    </div>
+
+    <div class="container content px-4 pb-6">
+        <p><a href="/recipes/">
+    <button class="button has-text-dark">
+        <span class="icon">
+            <i class="fas fa-angle-left has-text-dark"></i>
+        </span>
+        <span class="has-text-dark">Back</span>
+    </button>
+</a></p>
+
+<h1 id="chicken-and-rice-soup">Chicken and Rice Soup</h1>
+
+<p><img class="recipe-img" src="/recipes/assets/img/chicken-and-rice-soup/1.jpg" alt="Chicken and Rice Soup Image" /></p>
+
+<h2 id="ingredients">Ingredients</h2>
+
+<ul>
+  <li>1 tablespoon olive oil</li>
+  <li>1 medium onion chopped small</li>
+  <li>3 sticks celery chopped small</li>
+  <li>3 medium carrots peeled &amp; sliced thin</li>
+  <li>3 cloves garlic minced</li>
+  <li>6 uncooked chicken thighs (boneless, skinless)</li>
+  <li>8 cups chicken broth (two 32 oz. cartons)</li>
+  <li>1/2 teaspoon Italian seasoning</li>
+  <li>1 cup long grain white rice e.g. jasmine</li>
+  <li>Salt &amp; pepper to taste</li>
+  <li>1-2 tablespoons fresh parsley chopped (optional)</li>
+</ul>
+
+<h2 id="directions">Directions</h2>
+
+<ol>
+  <li>Prep your onion, celery, and carrots.S</li>
+  <li>Add the oil, onion, and celery to a soup pot over medium-high heat. Sauté for 5 minutes.</li>
+  <li>Stir in the garlic and cook for about 30 seconds.</li>
+  <li>Add the chicken thighs, carrots, chicken broth, Italian seasoning, and rice to the pot. Increase the heat to high and bring the soup to a boil.S</li>
+  <li>Once boiling, reduce the heat so the soup’s simmering. Give it a good stir to ensure the rice isn’t sticking to the bottom.</li>
+  <li>Continue simmering for 15-20 minutes or until the chicken is cooked through, the carrots have softened, and the rice has cooked. Keep in mind the longer you cook the soup, the mushier the rice will get.</li>
+  <li>Take the chicken out of the pot and shred it or cut it up prior to serving. Add it back in and then season the soup with salt &amp; pepper as needed and add in the parsley if using.</li>
+</ol>
+
+<h2 id="source">Source</h2>
+
+<p><a href="https://www.saltandlavender.com/easy-chicken-and-rice-soup/">Salt and Lavender</a></p>
+
+<h2 id="images">Images</h2>
+
+<script type="text/javascript">
+
+    function openModal(id) {
+        document.getElementById(id).classList.add("is-active");
+    }
+
+    function closeModals() {
+        document.querySelectorAll(".modal").forEach(($el) => {
+            $el.classList.remove("is-active");
+        });
+    }
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+
+
+        document.querySelectorAll(".modal-background,.modal-close,.modal-card-head,.delete,.modal-card-foot").forEach(($el) => {
+            const $modal = $el.closest(".modal");
+            $el.addEventListener("click", () => {
+                $modal.classList.remove("is-active");
+            });
+        });
+
+        document.addEventListener("keydown", (event) => {
+            const e = event || window.event;
+            if (e.keyCode === 27) {
+                closeModals();
+            }
+        });
+    });
+    
+</script>
+
+<div class="is-flex is-flex-wrap-wrap">
+    
+    
+    <div class="m-3 is-clickable" onclick="openModal('1')">
+        <img class="gallery-img" src="/recipes/assets/img/chicken-and-rice-soup/1.jpg" alt="image" />
+    </div>
+    <div class="modal" id="1">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <img class="modal-gallery-img" src="/recipes/assets/img/chicken-and-rice-soup/1.jpg" alt="image" />
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+    </div>
+</body>
+
+</html>

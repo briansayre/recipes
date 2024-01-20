@@ -1,14 +1,14 @@
 ---
 layout: default
 title: "Chicken and Rice Soup"
-date: 2024-01-24
+date: 2024-01-20
 tags: Dinner Chicken
 imgfolder: chicken-and-rice-soup
 ---
 
 {% include postbuttons.html %}
   
-# {{ page.title }}  
+# {{ page.title }}
 
 <img class="recipe-img" src="{{ site.baseurl }}/assets/img/{{ page.imgfolder }}/1.jpg" alt="{{ page.title }} Image">
 
@@ -28,13 +28,13 @@ imgfolder: chicken-and-rice-soup
   
 ## Directions
 
-1. Prep your onion, celery, and carrots. 
+1. Prep your onion, celery, and carrots.S
 2. Add the oil, onion, and celery to a soup pot over medium-high heat. Sauté for 5 minutes.
 3. Stir in the garlic and cook for about 30 seconds.
-4. Add the chicken thighs, carrots, chicken broth, Italian seasoning, and rice to the pot. Increase the heat to high and bring the soup to a boil. 
+4. Add the chicken thighs, carrots, chicken broth, Italian seasoning, and rice to the pot. Increase the heat to high and bring the soup to a boil.S
 5. Once boiling, reduce the heat so the soup's simmering. Give it a good stir to ensure the rice isn't sticking to the bottom.
 6. Continue simmering for 15-20 minutes or until the chicken is cooked through, the carrots have softened, and the rice has cooked. Keep in mind the longer you cook the soup, the mushier the rice will get.
-7. Take the chicken out of the pot and shred it or cut it up prior to serving. Add it back in and then season the soup with salt & pepper as needed and add in the parsley if using. 
+7. Take the chicken out of the pot and shred it or cut it up prior to serving. Add it back in and then season the soup with salt & pepper as needed and add in the parsley if using.
 
 ## Source
 
