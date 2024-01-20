@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cinnamon Rolls</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/recipes/assets/styles.css">
+    <link rel="icon" type="image/x-icon" href="/recipes/assets/img/favicon.ico">
+    <script src="https://kit.fontawesome.com/2a65e6ebaf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="has-text-centered is-unselectable">
+        <h1 class="title is-size-3 has-text-success-dark my-5" id="header">
+            <a href="/recipes/">
+                Sayre Recipes
+            </a>
+        </h1>
+    </div>
+
+    <div class="container content px-4 pb-6">
+        <p><a href="/recipes/">
+    <button class="button has-text-dark">
+        <span class="icon">
+            <i class="fas fa-angle-left has-text-dark"></i>
+        </span>
+        <span class="has-text-dark">Back</span>
+    </button>
+</a></p>
+
+<h1 id="cinnamon-rolls">Cinnamon Rolls</h1>
+
+<p><img class="recipe-img" src="/recipes/assets/img/cinnamon-rolls/1.jpg" alt="Cinnamon Rolls Image" /></p>
+
+<h2 id="ingredients">Ingredients</h2>
+
+<ul>
+  <li>Tangzhong
+    <ul>
+      <li>150 milliliters of water</li>
+      <li>30 grams of all-purpose flour</li>
+    </ul>
+  </li>
+  <li>Dough
+    <ul>
+      <li>165 milliliters of cold buttermilk</li>
+      <li>450 grams of all-purpose flour</li>
+      <li>50 grams of granulated sugar</li>
+      <li>Two teaspoons of kosher salt</li>
+      <li>One packet or two and a quarter teaspoons of instant yeast</li>
+      <li>Two eggs</li>
+      <li>70 grams of unsalted room temperature butter</li>
+    </ul>
+  </li>
+  <li>Filling
+    <ul>
+      <li>60 grams of unsalted butter, room temperature</li>
+      <li>Spice Mixture</li>
+      <li>80 grams of granulated sugar</li>
+      <li>50 grams of light brown sugar</li>
+      <li>One and a half tablespoons of ground cinnamon</li>
+    </ul>
+  </li>
+  <li>Cream Cheese Frosting
+    <ul>
+      <li>200 grams of powdered sugar</li>
+      <li>80 grams or three quarters of a stick of butter, room temperature</li>
+      <li>115 grams or half a block of cream cheese, room temperature</li>
+      <li>Half teaspoon of kosher salt</li>
+      <li>One to two tablespoons of heavy cream</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="directions">Directions</h2>
+
+<ol>
+  <li>To create the tangzhong, whisk the water and flour in a pot over medium heat. Stir constantly until the consistency is like frosting - around 175 degrees.</li>
+  <li>Add to mixing bowl and add buttermilk while mixing until mixture is smooth.</li>
+  <li>Now add the flour, sugar, salt, instant yeast, and eggs.</li>
+  <li>Mix slowly and knead for 2 minutes. Add flour as necessary.</li>
+  <li>Add cold butter slowly while kneading for 5 to 6 minutes.</li>
+  <li>Proof in a covered bowl for 1 to 2 hours.</li>
+  <li>Spray work surface and roll out dough with rolling pin. 12 x 20 inches.</li>
+  <li>Spread room temp the butter to the dough.</li>
+  <li>Combine the sugar, brown sugar, and cinnamon  and sieve over the dough.</li>
+  <li>Roll upward, going back and forth. Pinch shut.</li>
+  <li>Cut into 12 rolls.</li>
+  <li>Place in 9 X 13 pan lined with parchment paper.</li>
+  <li>Cover and rise for an hour before baking or let sit in fridge over night. Let sit for an hour at room tem before baking if you let it sit over night.</li>
+  <li>Bake at 375F for 25 min, rotating half way through.</li>
+  <li>In bowl, combine frosting ingredients and beat until smooth. Add cream until consistency is at a desired level.</li>
+  <li>Once baked, remove from ban and frost.</li>
+</ol>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li>Optional: pour heavy cream over rolls prior to baking, may take a few minutes longer.</li>
+</ul>
+
+<h2 id="source">Source</h2>
+
+<p><a href="https://www.youtube.com/watch?v=QsMNoGvPAJ4">Babish</a></p>
+
+<h2 id="images">Images</h2>
+
+<script type="text/javascript">
+
+    function openModal(id) {
+        document.getElementById(id).classList.add("is-active");
+    }
+
+    function closeModals() {
+        document.querySelectorAll(".modal").forEach(($el) => {
+            $el.classList.remove("is-active");
+        });
+    }
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+
+
+        document.querySelectorAll(".modal-background,.modal-close,.modal-card-head,.delete,.modal-card-foot").forEach(($el) => {
+            const $modal = $el.closest(".modal");
+            $el.addEventListener("click", () => {
+                $modal.classList.remove("is-active");
+            });
+        });
+
+        document.addEventListener("keydown", (event) => {
+            const e = event || window.event;
+            if (e.keyCode === 27) {
+                closeModals();
+            }
+        });
+    });
+    
+</script>
+
+<div class="is-flex is-flex-wrap-wrap">
+    
+    
+    
+    
+    <div class="m-3 is-clickable" onclick="openModal('1')">
+        <img class="gallery-img" src="/recipes/assets/img/cinnamon-rolls/1.jpg" alt="image" />
+    </div>
+    <div class="modal" id="1">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <img class="modal-gallery-img" src="/recipes/assets/img/cinnamon-rolls/1.jpg" alt="image" />
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+    </div>
+</body>
+
+</html>

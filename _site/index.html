@@ -29,6 +29,10 @@
 
         var id = 0;
         
+        var tags = ["Breakfast"]
+        var postDiv = document.getElementById(++id);
+        postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
+        
         var tags = ["Dinner","Chicken"]
         var postDiv = document.getElementById(++id);
         postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
@@ -60,6 +64,10 @@
         document.getElementById("search-text-mobile").value = searchText;
 
         var id = 0;
+        
+        var title = "Cinnamon Rolls"
+        var postDiv = document.getElementById(++id);
+        postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
         
         var title = "Chicken and Rice Soup"
         var postDiv = document.getElementById(++id);
@@ -200,6 +208,31 @@
     
     
     <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="1">
+        <a href="/recipes/2024/01/20/cinnamon-rolls.html">
+            <div class="card is-shadowless">
+                <div class="card-image">
+                    <figure class="image is-4by5 m-0">
+                        <img class="card-img" src="/recipes/assets/img/cinnamon-rolls/1.jpg" alt="Cinnamon Rolls Image" />
+                    </figure>
+                </div>
+                <div class="card-content px-0 py-4">
+                    <div class="media-content">
+                        <p class="title is-5 has-text-success-dark post-title">Cinnamon Rolls</p>
+                    </div>
+                    <div class="content pt-2">
+                        <div class="tags">
+                            
+                            <span class="tag"> Breakfast </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="2">
         <a href="/recipes/2024/01/20/chicken-and-rice-soup.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -226,7 +259,7 @@
     </div>
     
     
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="2">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="3">
         <a href="/recipes/2024/01/13/pancakes.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -251,7 +284,7 @@
     </div>
     
     
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="3">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="4">
         <a href="/recipes/2024/01/10/hot-honey-pizza.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -280,7 +313,7 @@
     </div>
     
     
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="4">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="5">
         <a href="/recipes/2024/01/08/creme-brulee.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -305,7 +338,7 @@
     </div>
     
     
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="5">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="6">
         <a href="/recipes/2024/01/07/monkey-bread.html">
             <div class="card is-shadowless">
                 <div class="card-image">
