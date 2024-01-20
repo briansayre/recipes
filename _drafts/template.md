@@ -24,6 +24,8 @@ imgfolder: title-here
 
 ## Source
 
+[Title](link)
+
 ## Images
 
 {% include postimages.html %}
