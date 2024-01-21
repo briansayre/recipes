@@ -55,11 +55,12 @@ imgfolder: cinnamon-rolls
 13. Cover and rise for an hour before baking or let sit in fridge over night. Let sit for an hour at room tem before baking if you let it sit over night.
 14. Bake at 375F for 25 min, rotating half way through.
 15. In bowl, combine frosting ingredients and beat until smooth. Add cream until consistency is at a desired level.
-16. Once baked, remove from ban and frost.
+16. Once baked, remove from pan and frost.
 
 ## Notes
 
-- Optional: pour heavy cream over rolls prior to baking, may take a few minutes longer.
+- Optional: pour heavy cream over rolls prior to baking, may take a few minutes longer to bake.
+- I had a lot of left over frosting.
 
 ## Source
 
