@@ -1,18 +1,21 @@
-<a href="{{ site.baseurl }}/">
-    <button class="button has-text-dark">
-        <span class="icon">
-            <i class="fas fa-angle-left has-text-dark"></i>
-        </span>
-        <span class="has-text-dark">Back</span>
-    </button>
-</a>
-
-<button id="copy" class="button has-text-dark">
-    <span class="icon">
-        <i class="fas fa-link has-text-dark"></i>
-    </span>
-    <span id="copy-text" class="has-text-dark">Copy Link</span>
-</button>
+<div class="block columns">
+    <div class="column">
+        <a href="{{ site.baseurl }}/">
+            <button class="button has-text-dark">
+                <span class="icon">
+                    <i class="fas fa-angle-left has-text-dark"></i>
+                </span>
+                <span class="has-text-dark">Back</span>
+            </button>
+        </a>
+        <button id="copy" class="button has-text-dark">
+            <span class="icon">
+                <i class="fas fa-link has-text-dark"></i>
+            </span>
+            <span id="copy-text" class="has-text-dark">Copy Link</span>
+        </button>
+    </div>
+</div>
 
 <script>
     document.getElementById('copy').addEventListener('click', function (clicked) {
