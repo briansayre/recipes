@@ -29,6 +29,14 @@
 
         var id = 0;
         
+        var tags = ["Dessert"]
+        var postDiv = document.getElementById(++id);
+        postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
+        
+        var tags = ["Dessert"]
+        var postDiv = document.getElementById(++id);
+        postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
+        
         var tags = ["Dinner","Chicken"]
         var postDiv = document.getElementById(++id);
         postDiv.style.display = (selectedTag == 'All' || tags.includes(selectedTag)) ? 'unset' : 'none';
@@ -68,6 +76,14 @@
         document.getElementById("search-text-mobile").value = searchText;
 
         var id = 0;
+        
+        var title = "Lazy Tres Leches"
+        var postDiv = document.getElementById(++id);
+        postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
+        
+        var title = "Chocolate Chip Cookies"
+        var postDiv = document.getElementById(++id);
+        postDiv.style.display = (searchText == '' || title.toLowerCase().includes(searchText.toLowerCase())) ? 'unset' : 'none';
         
         var title = "BBQ Wings"
         var postDiv = document.getElementById(++id);
@@ -216,6 +232,56 @@
     
     
     <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="1">
+        <a href="/recipes/2024/05/08/lazy-tres-leches.html">
+            <div class="card is-shadowless">
+                <div class="card-image">
+                    <figure class="image is-4by5 m-0">
+                        <img class="card-img" src="/recipes/assets/img/lazy-tres-leches/1.jpg" alt="Lazy Tres Leches Image" />
+                    </figure>
+                </div>
+                <div class="card-content px-0 py-4">
+                    <div class="media-content">
+                        <p class="title is-5 has-text-success-dark post-title">Lazy Tres Leches</p>
+                    </div>
+                    <div class="content pt-2">
+                        <div class="tags">
+                            
+                            <span class="tag"> Dessert </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="2">
+        <a href="/recipes/2024/05/08/chocloate-chip-cookies.html">
+            <div class="card is-shadowless">
+                <div class="card-image">
+                    <figure class="image is-4by5 m-0">
+                        <img class="card-img" src="/recipes/assets/img/chocolate-chip-cookies/1.jpg" alt="Chocolate Chip Cookies Image" />
+                    </figure>
+                </div>
+                <div class="card-content px-0 py-4">
+                    <div class="media-content">
+                        <p class="title is-5 has-text-success-dark post-title">Chocolate Chip Cookies</p>
+                    </div>
+                    <div class="content pt-2">
+                        <div class="tags">
+                            
+                            <span class="tag"> Dessert </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="3">
         <a href="/recipes/2024/01/21/bbq-wing.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -242,7 +308,7 @@
     </div>
     
     
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="2">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="4">
         <a href="/recipes/2024/01/20/cinnamon-rolls.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -267,7 +333,7 @@
     </div>
     
     
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="3">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="5">
         <a href="/recipes/2024/01/20/chicken-and-rice-soup.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -294,7 +360,7 @@
     </div>
     
     
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="4">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="6">
         <a href="/recipes/2024/01/13/pancakes.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -319,7 +385,7 @@
     </div>
     
     
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="5">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="7">
         <a href="/recipes/2024/01/10/hot-honey-pizza.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -348,7 +414,7 @@
     </div>
     
     
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="6">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="8">
         <a href="/recipes/2024/01/08/creme-brulee.html">
             <div class="card is-shadowless">
                 <div class="card-image">
@@ -373,7 +439,7 @@
     </div>
     
     
-    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="7">
+    <div class="column is-6-mobile is-4-tablet is-3-widescreen" id="9">
         <a href="/recipes/2024/01/07/monkey-bread.html">
             <div class="card is-shadowless">
                 <div class="card-image">

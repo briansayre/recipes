@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chocolate Chip Cookies"
-date: 2025-05-08
+date: 2024-05-08
 tags: Dessert
 imgfolder: chocolate-chip-cookies
 ---
@@ -47,4 +47,4 @@ imgfolder: chocolate-chip-cookies
 
 ## Images
 
-{% include postimages.html %}S
+{% include postimages.html %}

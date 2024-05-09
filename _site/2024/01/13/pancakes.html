@@ -29,6 +29,30 @@
     </button>
 </a></p>
 
+<p><button id="copy" class="button has-text-dark">
+    <span class="icon">
+        <i class="fas fa-link has-text-dark"></i>
+    </span>
+    <span id="copy-text" class="has-text-dark">Copy Link</span>
+</button></p>
+
+<script>
+    document.getElementById('copy').addEventListener('click', function (clicked) {
+        return function () {
+            if (!clicked) {
+                navigator.clipboard.writeText(window.location.href);
+                var last = this.innerHTML;
+                document.getElementById('copy-text').innerHTML = 'Copied!';
+                clicked = true;
+                setTimeout(function () {
+                    this.innerHTML = last;
+                    clicked = false;
+                }.bind(this), 2000);
+            }
+        };
+    }(false), this);
+</script>
+
 <h1 id="pancakes">Pancakes</h1>
 
 <p><img class="recipe-img" src="/recipes/assets/img/pancakes/1.jpg" alt="Pancakes Image" /></p>
@@ -48,7 +72,7 @@
 <h2 id="directions">Directions</h2>
 
 <ol>
-  <li>Heat a griddle or large skillet over medium-low heat. In a bowl, mix together dry ingredients. Beat eggs into 1½ cups milk, then stir in 2 tablespoons melted cooled butter, if using it. Gently stir this mixture into dry ingredients, mixing only enough to moisten flour; don’t worry about a few lumps. If batter seems thick, add a little more milk.</li>
+  <li>Heat a griddle or large skillet over medium-low heat. In a bowl, mix together dry ingredients. Beat eggs into 1 1/2 cups milk, then stir in 2 tablespoons melted cooled butter, if using it. Gently stir this mixture into dry ingredients, mixing only enough to moisten flour; don’t worry about a few lumps. If batter seems thick, add a little more milk.</li>
   <li>Place a teaspoon or 2 of butter or oil on griddle or skillet. When butter foam subsides or oil shimmers, ladle batter onto griddle or skillet, making pancakes of any size you like. Adjust heat as necessary; usually, first batch will require higher heat than subsequent batches. Flip pancakes after bubbles rise to surface and bottoms brown, after 2 to 4 minutes.</li>
   <li>Cook until second side is lightly browned. Serve, or hold on an ovenproof plate in a 200-degree oven for up to 15 minutes.</li>
 </ol>
@@ -92,6 +116,12 @@
 </script>
 
 <div class="is-flex is-flex-wrap-wrap">
+    
+    
+    
+    
+    
+    
     
     
     
