@@ -15,28 +15,28 @@ imgfolder: cinnamon-rolls
 ## Ingredients
 
 - Tangzhong
-    - 150 milliliters of water
-    - 30 grams of all-purpose flour
+  - 150 milliliters of water
+  - 30 grams of all-purpose flour
 - Dough
-    - 165 milliliters of cold buttermilk
-    - 450 grams of all-purpose flour
-    - 50 grams of granulated sugar
-    - Two teaspoons of kosher salt
-    - One packet or two and a quarter teaspoons of instant yeast
-    - Two eggs
-    - 70 grams of unsalted room temperature butter
+  - 165 milliliters of cold buttermilk
+  - 450 grams of all-purpose flour
+  - 50 grams of granulated sugar
+  - Two teaspoons of kosher salt
+  - One packet or two and a quarter teaspoons of instant yeast
+  - Two eggs
+  - 70 grams of unsalted room temperature butter
 - Filling
-    - 60 grams of unsalted butter, room temperature
-    - Spice Mixture
-    - 80 grams of granulated sugar
-    - 50 grams of light brown sugar
-    - One and a half tablespoons of ground cinnamon
+  - 60 grams of unsalted butter, room temperature
+  - Spice Mixture
+  - 80 grams of granulated sugar
+  - 50 grams of light brown sugar
+  - One and a half tablespoons of ground cinnamon
 - Cream Cheese Frosting
-    - 200 grams of powdered sugar
-    - 80 grams or three quarters of a stick of butter, room temperature
-    - 115 grams or half a block of cream cheese, room temperature
-    - Half teaspoon of kosher salt
-    - One to two tablespoons of heavy cream
+  - 200 grams of powdered sugar
+  - 80 grams or three quarters of a stick of butter, room temperature
+  - 115 grams or half a block of cream cheese, room temperature
+  - Half teaspoon of kosher salt
+  - One to two tablespoons of heavy cream
   
 ## Directions
 

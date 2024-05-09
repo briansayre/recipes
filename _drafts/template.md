@@ -33,7 +33,7 @@ imgfolder: title-here
 ## To Do (delete when done)
 
 - Copy this file into /_posts
-- Name file appropiately (YYYY-MM-DD-title-here.md)
+- Name file appropriately (YYYY-MM-DD-title-here.md)
 - Create a folder at assets/img/ with the title as the name (title-here)
 - Upload at least 1.jpg to the folder
 - Update front matter
