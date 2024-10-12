@@ -38,3 +38,4 @@ imgfolder: title-here
 - Upload at least 1.jpg to the folder
 - Update front matter
 - Fill out ingredients, directions, etc.
+- Run 'bundle exec jekyll serve' to run locally
