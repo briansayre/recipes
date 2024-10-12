@@ -23,7 +23,12 @@ imgfolder: salted-caramel-ice-cream
 
 ## Directions
 
-1. Follow [this video](https://www.youtube.com/watch?v=mgdQ1CPASKE&t=930s).
+1. Make Caramel: Heat sugar and water until amber.
+2. Mix Caramel: Add heavy cream and butter, then cool.
+3. Prepare Custard Base: Mix milk, heavy cream, and salt; heat. Whisk egg yolks and sugar, then temper with hot milk mixture.
+4. Combine: Add custard to caramel; cook until thickened.
+5. Chill: Strain mixture and chill.
+6. Churn: Churn in an ice cream maker, then freeze.
 
 ## Source
 
