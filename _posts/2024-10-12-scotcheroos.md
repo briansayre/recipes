@@ -14,7 +14,7 @@ imgfolder: scotcheroos
 
 ## Ingredients
 
-- 6 cups of Rice Krispies
+- 9 cups of Rice Krispies
 - 1.5 cups of peanut butter
 - 1.5 cups corn syrup
 - 1.5 cups sugar
