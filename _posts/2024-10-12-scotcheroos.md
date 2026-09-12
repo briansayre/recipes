@@ -14,10 +14,10 @@ imgfolder: scotcheroos
 
 ## Ingredients
 
-- 9 cups of Rice Krispies
-- 1.5 cups of peanut butter
-- 1.5 cups corn syrup
-- 1.5 cups sugar
+- 9 cups (240 g) of Rice Krispies
+- 1.5 cups (387 g) of peanut butter
+- 1.5 cups (492 g) corn syrup
+- 1.5 cups (300 g) sugar
 - 12 oz milk chocolate chips
   
 ## Directions
